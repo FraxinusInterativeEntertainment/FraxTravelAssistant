@@ -15,9 +15,14 @@ public class UICommand : SimpleCommand
         switch (name)
         {
             case Const.Notification.LOAD_UI_FORM:
-                UIManager.instance.ShowForm(obj as string);
+                UIManager.instance.ShowForm(obj as string, false);
                 break;
-
+            case Const.Notification.LOAD_UI_ROOT_FORM:
+                UIManager.instance.ShowForm(obj as string, true);
+                break;
+            case Const.Notification.BACK_TO_LAST_FORM:
+                UIManager.instance.ShowLastOpenedForm();
+                break;
         }
     }
 }

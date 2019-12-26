@@ -7,11 +7,14 @@ public static partial class Const
     public static class Notification
     {
         public const string QR_SCAN_LOGIN = "QrScanLogin";
-        public const string LOGOUT = "Logout";
         public const string LOGIN_SUCCESS = "LoginSuccess";
         public const string LOGIN_FAIL = "LoginFail";
+        public const string LOGOUT = "Logout";
+        public const string LOGOUT_SUCCESS = "LogoutSuccess";
         public const string CHECK_LOGIN_STATUS = "CheckLoginStatus";
         public const string LOAD_UI_FORM = "LoadUIForm";
+        public const string LOAD_UI_ROOT_FORM = "LoadUIRootForm";
+        public const string BACK_TO_LAST_FORM = "BackToLastForm";
 
         public const string WS_SEND = "WsSend";
 

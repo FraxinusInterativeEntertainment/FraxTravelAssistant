@@ -49,4 +49,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultViewNames:
+  - BackgroundView
   - LoginView
+  - NavigationBar

@@ -11,5 +11,7 @@ public static partial class Const
         public const string LOGIN_VIEW = UI_VIEW_PATH + "LoginView";
         public const string DEBUG_VIEW = UI_VIEW_PATH + "DebugView";
         public const string PRE_GAME_VIEW = UI_VIEW_PATH + "PreGameView";
+        public const string NAVIGATION_BAR = UI_VIEW_PATH + "NavigationBar";
+        public const string QUEST_INFO_VIEW = UI_VIEW_PATH + "QuestInfoView";
     }
 }

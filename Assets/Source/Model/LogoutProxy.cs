@@ -18,6 +18,7 @@ public class LogoutProxy : Proxy, IProxy, IResponder
 
     public void OnResult(object _data)
     {
+        AppFacade.instance.SendNotification(Const.Notification.LOGOUT_SUCCESS);
         Debug.Log("Logout Success");
     }
 

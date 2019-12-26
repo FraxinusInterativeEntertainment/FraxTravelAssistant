@@ -57,10 +57,12 @@ public class GameManager : MonoBehaviour
 
         FSMState InGame = new InGameState((int)MainFSMStateID.InGame, m_fsmSystem);
         InGame.AddTransition((int)MainFSMTransition.PreGame, (int)MainFSMStateID.PreGame);
+        InGame.AddTransition((int)MainFSMTransition.Login, (int)MainFSMStateID.LoginState);
         m_fsmSystem.AddState(InGame);
 
         FSMState PreGame = new PreGameState((int)MainFSMStateID.PreGame, m_fsmSystem);
         PreGame.AddTransition((int)MainFSMTransition.InGame, (int)MainFSMStateID.InGame);
+        PreGame.AddTransition((int)MainFSMTransition.Login, (int)MainFSMStateID.LoginState);
         m_fsmSystem.AddState(PreGame);
 
         m_fsmSystem.PerformTransition((int)MainFSMStateID.LoginState);

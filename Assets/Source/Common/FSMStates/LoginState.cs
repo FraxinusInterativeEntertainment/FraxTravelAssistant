@@ -9,7 +9,7 @@ public class LoginState : FSMState
     public override void DoBeforeEntering()
     {
         base.DoBeforeEntering();
-
+        Debug.Log("Enter login state");
         //AppFacade.instance.SendNotification(Const.Notification.LOAD_SCENE, new SceneVO(Const.SceneIndex.MAIN_PANEL_SCENE));
 
         //AppFacade.instance.SendNotification(Const.Notification.LOAD_UI_FORM, Const.UIFormNames.LOGIN_FORM);

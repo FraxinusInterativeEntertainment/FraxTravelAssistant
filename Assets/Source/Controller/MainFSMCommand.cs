@@ -19,7 +19,10 @@ public class MainFSMCommand : SimpleCommand
                 //SceneManager.LoadScene(Const.SceneNames.MAIN_PANEL_SCENE);
                 GameManager.instance.ChangeMainFSMState(MainFSMStateID.PreGame);
                 break;
-            
+            case Const.Notification.LOGOUT_SUCCESS:
+                //SceneManager.LoadScene(Const.SceneNames.MAIN_PANEL_SCENE);
+                GameManager.instance.ChangeMainFSMState(MainFSMStateID.LoginState);
+                break;
         }
     }
 }
