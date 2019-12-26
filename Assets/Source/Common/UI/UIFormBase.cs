@@ -4,6 +4,8 @@ using UnityEngine;
 
 public abstract class UIFormBase : MonoBehaviour
 {
+    public string formName { get; set; }
+
     [SerializeField]
     protected List<string> defaultViewNames = new List<string>();
 
@@ -16,6 +18,16 @@ public abstract class UIFormBase : MonoBehaviour
         {
             ShowView(Const.UIViewNames.UI_VIEW_PATH + viewName);
         }
+    }
+
+    public virtual void Show()
+    {
+        this.gameObject.SetActive(true);
+    }
+
+    public virtual void Hide()
+    {
+        this.gameObject.SetActive(false);
     }
 
     public virtual void ShowView(string _uiViewName)

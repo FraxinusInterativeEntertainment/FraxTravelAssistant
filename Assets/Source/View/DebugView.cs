@@ -9,6 +9,8 @@ public class DebugView : UIViewBase
     public event Action OnLogoutButton = delegate { };
 
     [SerializeField]
+    private GameObject m_debugPanel;
+    [SerializeField]
     private Button m_debugButton;
     [SerializeField]
     private Button m_logoutButton;
@@ -19,10 +21,12 @@ public class DebugView : UIViewBase
         
         m_debugButton.onClick.AddListener(() => { OnDebugButton(); });
         m_logoutButton.onClick.AddListener(() => { OnLogoutButton(); });
+
+        m_debugPanel.SetActive(false);
     }
 
     private void OnDebugButton()
     {
-        this.gameObject.SetActive(!this.gameObject.activeSelf);
+        m_debugPanel.SetActive(!m_debugPanel.activeSelf);
     }
 }

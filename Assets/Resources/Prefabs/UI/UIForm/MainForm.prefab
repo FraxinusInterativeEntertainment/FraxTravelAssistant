@@ -43,5 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d280ced86d5c7c4ea2122b25048d57f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultViews:
-  - {fileID: 7706236034854977884, guid: bbd3cd6380ce1564f9250a1dab426b0f, type: 3}
+  FormName: MainForm
+  defaultViewNames: []
