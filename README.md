@@ -2,6 +2,6 @@
 手持设备
 
 Automation activated
-test2
+test2的
 
 木山今互动娱乐
