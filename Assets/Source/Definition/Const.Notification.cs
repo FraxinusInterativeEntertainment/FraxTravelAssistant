@@ -20,7 +20,7 @@ public static partial class Const
 
         public const string LOAD_SCENE = "LoadScene";
 
-        //old
+        //old, cc code ood
         public const string SEND_LOGIN = "SendLogin";
         public const string CONNECT_TO_WS_SERVER = "ConnectToWsServer";
         public const string CHANGE_GAME_STATUS = "ChangeGameStatus";
