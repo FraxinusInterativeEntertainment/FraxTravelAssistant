@@ -25,6 +25,7 @@ public class DebugView : UIViewBase
         m_debugPanel.SetActive(false);
     }
 
+    //打开bebug面板
     private void OnDebugButton()
     {
         m_debugPanel.SetActive(!m_debugPanel.activeSelf);
