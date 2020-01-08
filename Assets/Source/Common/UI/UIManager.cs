@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class UIManager : MonoBehaviour
 {
@@ -41,15 +43,12 @@ public class UIManager : MonoBehaviour
         {
             m_loadedForms[m_currentFormName].Hide();
             m_currentFormName = m_openedForms.Pop();
-            LoadForm(m_currentFormName);
             m_loadedForms[m_currentFormName].Show();
         }
     }
 
     public void ShowForm(string _formName, bool _isRoot)
     {
-        LoadForm(_formName);
-
         if (m_loadedForms.ContainsKey(m_currentFormName))
         {
             m_openedForms.Push(m_currentFormName);
@@ -62,19 +61,29 @@ public class UIManager : MonoBehaviour
         }
 
         m_currentFormName = _formName;
-        m_loadedForms[m_currentFormName].Show();
+
+        if (!m_loadedForms.ContainsKey(_formName))
+        {
+            LoadForm(_formName);
+        }
+        else
+        {
+            m_loadedForms[m_currentFormName].Show();
+        }
     }
     
     private void LoadForm(string _formName)
     {
-        if (!m_loadedForms.ContainsKey(_formName))
-        {
-            GameObject uiFormGO = m_resourcesService.Load<GameObject>(_formName);
-            UIFormBase form = GameObject.Instantiate(uiFormGO).GetComponent<UIFormBase>();
-            form.transform.SetParent(m_UIContentRoot);
-            form.Anchor(0, 0, 0);
+        Addressables.LoadAssetAsync<GameObject>(_formName).Completed += OnFormLoaded;
+    }
 
-            m_loadedForms.Add(_formName, form);
-        }
+    private void OnFormLoaded(AsyncOperationHandle<GameObject> _obj)
+    {
+        UIFormBase form = Instantiate(_obj.Result).GetComponent<UIFormBase>();
+        form.transform.SetParent(m_UIContentRoot);
+        form.Anchor(0, 0, 0);
+
+        form.Show();
+        m_loadedForms.Add(form.formName, form);
     }
 }

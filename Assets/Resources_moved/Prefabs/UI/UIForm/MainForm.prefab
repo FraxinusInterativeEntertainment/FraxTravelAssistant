@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 485571350287901186}
   - component: {fileID: 2850621216793929813}
   m_Layer: 0
-  m_Name: PopupForm
+  m_Name: MainForm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,5 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d280ced86d5c7c4ea2122b25048d57f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FormName: PopupForm
+  m_formName: MainForm
   defaultViewNames: []

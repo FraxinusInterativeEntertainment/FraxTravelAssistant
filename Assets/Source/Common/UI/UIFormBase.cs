@@ -4,8 +4,9 @@ using UnityEngine;
 
 public abstract class UIFormBase : MonoBehaviour
 {
-    public string formName { get; set; }
-
+    [SerializeField]
+    private string m_formName;
+    public string formName { get { return m_formName; } }
     [SerializeField]
     protected List<string> defaultViewNames = new List<string>();
 
