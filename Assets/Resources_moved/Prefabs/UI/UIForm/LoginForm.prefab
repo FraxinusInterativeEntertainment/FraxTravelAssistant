@@ -49,7 +49,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_formName: LoginForm
-  defaultViewNames:
-  - BackgroundView
-  - LoginView
-  - NavigationBar
+  m_uiViewInfos:
+  - m_uiView:
+      m_AssetGUID: 100529ddcd42e4749b8cac5b9b288f3b
+      m_SubObjectName: 
+    m_layer: 1
+  - m_uiView:
+      m_AssetGUID: 208ae79de6aa4c14b96db0177e8b822b
+      m_SubObjectName: 
+    m_layer: 0

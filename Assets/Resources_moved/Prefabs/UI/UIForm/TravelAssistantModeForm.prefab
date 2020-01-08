@@ -49,7 +49,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_formName: TravelAssistantModeForm
-  defaultViewNames:
-  - BackgroundView
-  - NavigationBar
-  - QuestInfoView
+  m_uiViewInfos:
+  - m_uiView:
+      m_AssetGUID: 208ae79de6aa4c14b96db0177e8b822b
+      m_SubObjectName: 
+    m_layer: 0
+  - m_uiView:
+      m_AssetGUID: f556ecf27b75b164fab48b16681d39d1
+      m_SubObjectName: 
+    m_layer: 1
+  - m_uiView:
+      m_AssetGUID: cfc24e181c2dd6e458b6f504d23b80c3
+      m_SubObjectName: 
+    m_layer: 1

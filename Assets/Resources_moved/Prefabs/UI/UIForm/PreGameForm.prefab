@@ -49,5 +49,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_formName: PreGameForm
-  defaultViewNames:
-  - MainMenuView
+  m_uiViewInfos:
+  - m_uiView:
+      m_AssetGUID: 208ae79de6aa4c14b96db0177e8b822b
+      m_SubObjectName: 
+    m_layer: 0
+  - m_uiView:
+      m_AssetGUID: db696d3c99fd21043aa7132ce4618304
+      m_SubObjectName: 
+    m_layer: 1

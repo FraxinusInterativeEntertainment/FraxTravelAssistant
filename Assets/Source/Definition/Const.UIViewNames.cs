@@ -6,7 +6,7 @@ public static partial class Const
 {
     public static class UIViewNames
     {
-        public const string UI_VIEW_PATH = "Prefabs/UI/UIView/";
+        public const string UI_VIEW_PATH = "";
 
         public const string LOGIN_VIEW = UI_VIEW_PATH + "LoginView";
         public const string DEBUG_VIEW = UI_VIEW_PATH + "DebugView";

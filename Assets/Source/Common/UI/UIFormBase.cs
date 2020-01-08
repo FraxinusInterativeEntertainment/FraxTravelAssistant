@@ -1,24 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public abstract class UIFormBase : MonoBehaviour
 {
     [SerializeField]
-    private string m_formName;
+    protected string m_formName;
     public string formName { get { return m_formName; } }
     [SerializeField]
-    protected List<string> defaultViewNames = new List<string>();
-
+    protected List<ViewInfo> m_uiViewInfos;
+    
     protected readonly Dictionary<string, UIViewBase> m_loadedViews = new Dictionary<string, UIViewBase>();
     protected readonly Stack<UIViewBase> m_viewStack = new Stack<UIViewBase>();
 
     protected virtual void Start()
     {
-        foreach (string viewName in defaultViewNames)
-        {
-            ShowView(Const.UIViewNames.UI_VIEW_PATH + viewName);
-        }
+        InitForm();
     }
 
     public virtual void Show()
@@ -35,11 +34,13 @@ public abstract class UIFormBase : MonoBehaviour
     {
         if (!m_loadedViews.ContainsKey(_uiViewName))
         {
-            m_loadedViews.Add(_uiViewName, LoadView(_uiViewName));
+            
         }
-        
-        m_loadedViews[_uiViewName].Show();
-        m_viewStack.Push(m_loadedViews[_uiViewName]);
+        else
+        {
+            m_loadedViews[_uiViewName].Show();
+            m_viewStack.Push(m_loadedViews[_uiViewName]);
+        }
     }
 
     public virtual void HideTopView()
@@ -55,16 +56,61 @@ public abstract class UIFormBase : MonoBehaviour
         this.transform.localPosition = new Vector3(_x, _y, _z);
     }
 
-    protected virtual UIViewBase LoadView(string _uiViewName)
+    /*
+    protected virtual void LoadView(string _uiViewName)
     {
         ResourcesService resourcesService = new ResourcesService();
         GameObject viewGO = resourcesService.Load<GameObject>(_uiViewName);
 
-        UIViewBase uiView = GameObject.Instantiate(viewGO).GetComponent<UIViewBase>();
+        Addressables.InstantiateAsync(_uiViewName).Completed += OnViewInstantiated;
 
+    }
+    */
+
+    protected virtual void InitForm()
+    {
+        foreach (ViewInfo viewInfo in m_uiViewInfos)
+        {
+            if (viewInfo.layer == UIViewLayer.Background)
+            {
+                viewInfo.uiView.InstantiateAsync().Completed += OnBackGroundViewInstantiated;
+            }
+            else if (viewInfo.layer == UIViewLayer.Content)
+            {
+                viewInfo.uiView.InstantiateAsync().Completed += OnContentViewInstantiated;
+            }
+        }
+    }
+
+    protected virtual void OnBackGroundViewInstantiated(AsyncOperationHandle<GameObject> _obj)
+    {
+        UIViewBase uiView = _obj.Result.GetComponent<UIViewBase>();
+        uiView.transform.SetParent(this.transform);
+        uiView.transform.SetAsFirstSibling();
+        uiView.Anchor(0, 0, 0);
+    }
+
+    protected virtual void OnContentViewInstantiated(AsyncOperationHandle<GameObject> _obj)
+    {
+        UIViewBase uiView = _obj.Result.GetComponent<UIViewBase>();
         uiView.transform.SetParent(this.transform);
         uiView.Anchor(0, 0, 0);
-
-        return uiView;
     }
+}
+
+[System.Serializable]
+public class ViewInfo
+{
+    [SerializeField]
+    private AssetReference m_uiView;
+    public AssetReference uiView { get { return m_uiView; } }
+    [SerializeField]
+    private UIViewLayer m_layer;
+    public UIViewLayer layer { get { return m_layer; } }
+}
+
+public enum UIViewLayer
+{ 
+    Background,
+    Content
 }

@@ -25,6 +25,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9f0460f83301aaf4bbcc2f73b6b0e039, type: 2}
   - {fileID: 11400000, guid: c7042f29c1e37d24eb672d552fe0b258, type: 2}
   - {fileID: 11400000, guid: 52576d4da8d9557449ad6befbf05ed65, type: 2}
+  - {fileID: 11400000, guid: 49f7fc34149d7df44a8bd5aaecfae9dd, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -81,6 +82,7 @@ MonoBehaviour:
     m_LabelNames:
     - default
     - UIForm
+    - UIView
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: f508208cbefffaf43aa6cb50aea79e99, type: 2}
