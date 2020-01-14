@@ -74,21 +74,8 @@ public class UIManager : MonoBehaviour
     
     private void LoadForm(string _formName)
     {
-        //Addressables.LoadAssetAsync<GameObject>(_formName).Completed += OnFormLoaded;
         Addressables.InstantiateAsync(_formName).Completed += OnFormInstantiated;
     }
-
-    /*
-    private void OnFormLoaded(AsyncOperationHandle<GameObject> _obj)
-    {
-        UIFormBase form = Instantiate(_obj.Result).GetComponent<UIFormBase>();
-        form.transform.SetParent(m_UIContentRoot);
-        form.Anchor(0, 0, 0);
-
-        form.Show();
-        m_loadedForms.Add(form.formName, form);
-    }
-    */
 
     private void OnFormInstantiated(AsyncOperationHandle<GameObject> _obj)
     {
