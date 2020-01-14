@@ -7,7 +7,7 @@ using System;
 public class LoginView : UIViewBase
 {
     public event Action TryLogin = delegate { };
-    
+
     [SerializeField]
     private Button m_loginButton;
     [SerializeField]

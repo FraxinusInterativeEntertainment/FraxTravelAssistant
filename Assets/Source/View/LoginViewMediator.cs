@@ -44,5 +44,4 @@ public class LoginViewMediator : Mediator, IMediator
     {
         SendNotification(Const.Notification.QR_SCAN_LOGIN);
     }
-    
 }

@@ -11,5 +11,7 @@ public class ModelPreCommand : SimpleCommand
         Facade.RegisterProxy(new ServerCommunicationProxy());
         Facade.RegisterProxy(new LoginStatusProxy());
         Facade.RegisterProxy(new LogoutProxy());
+        Facade.RegisterProxy(new UserInfoProxy());
+        Facade.RegisterProxy(new SubmitUserInfoProxy());
     }
 }

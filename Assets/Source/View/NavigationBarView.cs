@@ -8,11 +8,14 @@ public class NavigationBarView : UIViewBase
 {
     public event Action OnBackButton = delegate { };
     public event Action OnHomeButton = delegate { };
+    public event Action OnUserInfoButton = delegate { };
 
     [SerializeField]
     private Button m_backButton;
     [SerializeField]
     private Button m_homeButton;
+    [SerializeField]
+    private Button m_userInfoButton;
 
     private void Start()
     {
@@ -20,5 +23,6 @@ public class NavigationBarView : UIViewBase
 
         m_backButton.onClick.AddListener(() => { OnBackButton(); });
         m_homeButton.onClick.AddListener(() => { OnHomeButton(); });
+        m_userInfoButton.onClick.AddListener(() => { OnUserInfoButton(); });
     }
 }
