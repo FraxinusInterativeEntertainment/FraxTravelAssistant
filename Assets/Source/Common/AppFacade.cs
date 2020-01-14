@@ -34,7 +34,8 @@ public class AppFacade : Facade, IFacade
         RegisterCommand(Const.Notification.LOGOUT_SUCCESS, typeof(MainFSMCommand));
         RegisterCommand(Const.Notification.CHECK_LOGIN_STATUS, typeof(LoginStatusCommand));
         RegisterCommand(Const.Notification.LOGOUT, typeof(LogoutCommand));
-
+        RegisterCommand(Const.Notification.CHECK_USER_INFO_EXIST, typeof(UserInfoCommand));
+        RegisterCommand(Const.Notification.SUBMIT_USER_INFO, typeof(SubmitUserInfoCommand));
     }
 
     public void startup()

@@ -16,6 +16,8 @@ public static partial class Const
         public const string LOGOUT = HTTP_SERVER_ADDRESS + "/auth/logout/";
         public const string GET_LOGIN_STATUS = HTTP_SERVER_ADDRESS + "/auth/check_user_login/";
 
+        public const string GET_USERINFO=HTTP_SERVER_ADDRESS+ "/auth/check_user_extra_info/";
+        public const string POST_SUBMIT_USERINFO = HTTP_SERVER_ADDRESS + "/auth/update_user_extra_info/";
 
         /*
         public const string CONTROL_CENTER_LOGIN = HTTP_SERVER_ADDRESS + "/auth/check_control_center_login/";

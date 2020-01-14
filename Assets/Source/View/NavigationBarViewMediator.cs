@@ -14,6 +14,7 @@ public class NavigationBarViewMediator : Mediator, IMediator
     {
         m_navigationBarView.OnBackButton += Back;
         m_navigationBarView.OnHomeButton += Home;
+        m_navigationBarView.OnUserInfoButton += UserInfo;
     }
 
     public override System.Collections.Generic.IList<string> ListNotificationInterests()
@@ -43,5 +44,10 @@ public class NavigationBarViewMediator : Mediator, IMediator
     public void Back()
     {
         AppFacade.instance.SendNotification(Const.Notification.BACK_TO_LAST_FORM);
+    }
+    public void UserInfo()
+    {
+        Debug.Log("Try Open UserInfo");
+        AppFacade.instance.SendNotification(Const.Notification.LOAD_UI_ROOT_FORM, Const.UIFormNames.USER_INFORMATION_FORM);
     }
 }
