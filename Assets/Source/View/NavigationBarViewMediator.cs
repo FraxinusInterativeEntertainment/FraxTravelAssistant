@@ -24,12 +24,10 @@ public class NavigationBarViewMediator : Mediator, IMediator
 
         };
     }
-
     public override void HandleNotification(INotification notification)
     {
         string name = notification.Name;
         object vo = notification.Body;
-
         switch (name)
         {
 
@@ -47,7 +45,6 @@ public class NavigationBarViewMediator : Mediator, IMediator
     }
     public void UserInfo()
     {
-        Debug.Log("Try Open UserInfo");
         AppFacade.instance.SendNotification(Const.Notification.LOAD_UI_ROOT_FORM, Const.UIFormNames.USER_INFORMATION_FORM);
     }
 }
