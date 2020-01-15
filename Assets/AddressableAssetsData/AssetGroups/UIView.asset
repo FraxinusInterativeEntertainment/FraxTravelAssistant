@@ -31,6 +31,13 @@ MonoBehaviour:
     - UIView
     m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - m_GUID: 89e52c46701c1ee4abfbb0cb9abbd228
+    m_Address: QuestInfoView
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIView
+    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   - m_GUID: bbd3cd6380ce1564f9250a1dab426b0f
     m_Address: MainPanel
     m_ReadOnly: 0
@@ -45,7 +52,7 @@ MonoBehaviour:
     - UIView
     m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  - m_GUID: cfc24e181c2dd6e458b6f504d23b80c3
+  - m_GUID: d3c329d4ebe3ad043bf04e758e583f3f
     m_Address: NavigationBar
     m_ReadOnly: 0
     m_SerializedLabels:
@@ -68,13 +75,6 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   - m_GUID: e92f22e1529992041805cbe54b8d3fd0
     m_Address: DebugView
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - UIView
-    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  - m_GUID: f556ecf27b75b164fab48b16681d39d1
-    m_Address: QuestInfoView
     m_ReadOnly: 0
     m_SerializedLabels:
     - UIView

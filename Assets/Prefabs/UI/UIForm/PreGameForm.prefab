@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 470894019527771486}
   - component: {fileID: 7246705873704825918}
   m_Layer: 5
-  m_Name: TravelAssistantModeForm
+  m_Name: PreGameForm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,17 +48,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d280ced86d5c7c4ea2122b25048d57f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_formName: TravelAssistantModeForm
+  m_formName: PreGameForm
   m_uiViewInfos:
   - m_uiView:
       m_AssetGUID: 208ae79de6aa4c14b96db0177e8b822b
       m_SubObjectName: 
     m_layer: 0
   - m_uiView:
-      m_AssetGUID: f556ecf27b75b164fab48b16681d39d1
+      m_AssetGUID: db696d3c99fd21043aa7132ce4618304
       m_SubObjectName: 
     m_layer: 1
   - m_uiView:
-      m_AssetGUID: cfc24e181c2dd6e458b6f504d23b80c3
+      m_AssetGUID: d3c329d4ebe3ad043bf04e758e583f3f
       m_SubObjectName: 
     m_layer: 1
