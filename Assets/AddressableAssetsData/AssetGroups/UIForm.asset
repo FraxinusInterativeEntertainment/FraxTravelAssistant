@@ -52,6 +52,13 @@ MonoBehaviour:
     - UIForm
     m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - m_GUID: e34cbf15248ea17499cfc52a86d26c63
+    m_Address: UserInfoForm
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIForm
+    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: d111faaa0840a3a4dbfe6ce5aad212d0, type: 2}
   m_SchemaSet:

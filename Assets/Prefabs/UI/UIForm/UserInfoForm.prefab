@@ -48,5 +48,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d280ced86d5c7c4ea2122b25048d57f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultViewNames:
-  - UserInfoView
+  m_formName: UserInfoForm
+  m_uiViewInfos:
+  - m_uiView:
+      m_AssetGUID: 2926eeeed0fc2d844a0acc250ef238b4
+      m_SubObjectName: 
+    m_layer: 1
