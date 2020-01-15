@@ -67,6 +67,4 @@ public class GameManager : MonoBehaviour
 
         m_fsmSystem.PerformTransition((int)MainFSMStateID.LoginState);
     }
-
-    
 }
