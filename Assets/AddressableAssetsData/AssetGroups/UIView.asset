@@ -31,6 +31,13 @@ MonoBehaviour:
     - UIView
     m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - m_GUID: 2926eeeed0fc2d844a0acc250ef238b4
+    m_Address: UserInfoView
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIView
+    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   - m_GUID: 89e52c46701c1ee4abfbb0cb9abbd228
     m_Address: QuestInfoView
     m_ReadOnly: 0
