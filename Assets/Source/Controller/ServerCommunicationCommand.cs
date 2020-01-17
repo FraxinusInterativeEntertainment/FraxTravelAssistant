@@ -9,8 +9,12 @@ public class ServerCommunicationCommand : SimpleCommand
     public override void Execute(INotification notification)
     {
         object obj = notification.Body;
+
         ServerCommunicationProxy serverCommunicationProxy;
         serverCommunicationProxy = Facade.RetrieveProxy(ServerCommunicationProxy.NAME) as ServerCommunicationProxy;
+        WebSocketTokenProxy webSocketTokenProxy;
+        webSocketTokenProxy = Facade.RetrieveProxy(WebSocketTokenProxy.NAME) as WebSocketTokenProxy;
+
         string name = notification.Name;
 
         switch (name)
@@ -20,6 +24,9 @@ public class ServerCommunicationCommand : SimpleCommand
                 break;
             case Const.Notification.WS_SEND:
                 serverCommunicationProxy.SendMessage(obj);
+                break;
+            case Const.Notification.SETUP_CONNECTION_WITH_SERVER:
+                webSocketTokenProxy.RequestForWSToken();
                 break;
         }
     }

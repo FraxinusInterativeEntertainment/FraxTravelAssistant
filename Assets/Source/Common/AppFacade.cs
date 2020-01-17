@@ -36,6 +36,8 @@ public class AppFacade : Facade, IFacade
         RegisterCommand(Const.Notification.LOGOUT, typeof(LogoutCommand));
         RegisterCommand(Const.Notification.CHECK_USER_INFO_EXIST, typeof(UserInfoCommand));
         RegisterCommand(Const.Notification.SUBMIT_USER_INFO, typeof(SubmitUserInfoCommand));
+        RegisterCommand(Const.Notification.CONNECT_TO_WS_SERVER, typeof(ServerCommunicationCommand));
+        RegisterCommand(Const.Notification.SETUP_CONNECTION_WITH_SERVER, typeof(ServerCommunicationCommand));
     }
 
     public void startup()

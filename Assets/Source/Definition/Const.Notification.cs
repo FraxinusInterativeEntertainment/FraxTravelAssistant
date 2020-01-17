@@ -22,6 +22,8 @@ public static partial class Const
 
         public const string CHECK_USER_INFO_EXIST = "CheckUserInfo";
         public const string SUBMIT_USER_INFO = "SubmitUserInfo";
+        public const string SETUP_CONNECTION_WITH_SERVER = "SetupConnectionWithServer";
+
         //old, cc code ood 
         public const string SEND_LOGIN = "SendLogin";
         public const string CONNECT_TO_WS_SERVER = "ConnectToWsServer";
