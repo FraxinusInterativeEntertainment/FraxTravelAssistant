@@ -10,6 +10,7 @@ public class PreGameState : FSMState
     {
         base.DoBeforeEntering();
         AppFacade.instance.SendNotification(Const.Notification.CHECK_USER_INFO_EXIST);
+        AppFacade.instance.SendNotification(Const.Notification.SETUP_CONNECTION_WITH_SERVER);
         Debug.Log("Enter Pre game State");
     }
 }
