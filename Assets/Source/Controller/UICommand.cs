@@ -23,6 +23,9 @@ public class UICommand : SimpleCommand
             case Const.Notification.BACK_TO_LAST_FORM:
                 UIManager.instance.ShowLastOpenedForm();
                 break;
+            case Const.Notification.GO_TO_HOME_FORM:
+                UIManager.instance.ShowHomeForm();
+                break;
         }
     }
 }

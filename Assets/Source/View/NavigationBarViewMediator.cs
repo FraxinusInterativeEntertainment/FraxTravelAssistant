@@ -36,7 +36,7 @@ public class NavigationBarViewMediator : Mediator, IMediator
 
     public void Home()
     {
-        AppFacade.instance.SendNotification(Const.Notification.LOAD_UI_ROOT_FORM, Const.UIFormNames.PRE_GAME_FORM);
+        AppFacade.instance.SendNotification(Const.Notification.GO_TO_HOME_FORM);
     }
 
     public void Back()

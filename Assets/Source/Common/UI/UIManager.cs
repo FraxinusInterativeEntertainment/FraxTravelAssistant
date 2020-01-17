@@ -19,6 +19,7 @@ public class UIManager : MonoBehaviour
     private string m_currentFormName = "";
     private GameObject m_uiRoot;
     private ResourcesService m_resourcesService;
+    private string m_homeFormName;
     
     public static UIManager instance { get { return m_instance; } }
     
@@ -58,6 +59,7 @@ public class UIManager : MonoBehaviour
         if (_isRoot)
         {
             m_openedForms.Clear();
+            m_homeFormName = _formName;
         }
 
         m_currentFormName = _formName;
@@ -69,6 +71,14 @@ public class UIManager : MonoBehaviour
         else
         {
             m_loadedForms[m_currentFormName].Show();
+        }
+    }
+
+    public void ShowHomeForm()
+    {
+        if (m_homeFormName != null)
+        {
+            ShowForm(m_homeFormName, true);
         }
     }
     

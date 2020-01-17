@@ -29,6 +29,7 @@ public class AppFacade : Facade, IFacade
         RegisterCommand(Const.Notification.QR_SCAN_LOGIN, typeof(LoginCommand));
         RegisterCommand(Const.Notification.LOAD_UI_FORM, typeof(UICommand));
         RegisterCommand(Const.Notification.LOAD_UI_ROOT_FORM, typeof(UICommand));
+        RegisterCommand(Const.Notification.GO_TO_HOME_FORM, typeof(UICommand));
         RegisterCommand(Const.Notification.BACK_TO_LAST_FORM, typeof(UICommand));
         RegisterCommand(Const.Notification.LOGIN_SUCCESS, typeof(MainFSMCommand));
         RegisterCommand(Const.Notification.LOGOUT_SUCCESS, typeof(MainFSMCommand));

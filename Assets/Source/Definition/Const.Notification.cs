@@ -15,6 +15,7 @@ public static partial class Const
         public const string LOAD_UI_FORM = "LoadUIForm";
         public const string LOAD_UI_ROOT_FORM = "LoadUIRootForm";
         public const string BACK_TO_LAST_FORM = "BackToLastForm";
+        public const string GO_TO_HOME_FORM = "GoToHomeForm";
 
         public const string WS_SEND = "WsSend";
 
