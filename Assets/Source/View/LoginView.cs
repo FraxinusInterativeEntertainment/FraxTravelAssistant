@@ -28,12 +28,10 @@ public class LoginView : UIViewBase
     public void OnLoginSuccess(object _vo)
     {
         m_loginStatus.text = _vo as string;
-        Debug.Log(_vo);
     }
 
     public void OnLoginFail(object _vo)
     {
         m_loginStatus.text = _vo as string;
-        Debug.Log(_vo);
     }
 }

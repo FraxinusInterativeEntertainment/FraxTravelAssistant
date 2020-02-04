@@ -37,6 +37,5 @@ public class MainMenuViewMediator : Mediator, IMediator
     public void ShowAssistantModeWindow()
     {
         AppFacade.instance.SendNotification(Const.Notification.LOAD_UI_FORM, Const.UIFormNames.TRAVEL_ASSITANT_MODE_FORM);
-        Debug.Log("Open TA Window");
     }
 }

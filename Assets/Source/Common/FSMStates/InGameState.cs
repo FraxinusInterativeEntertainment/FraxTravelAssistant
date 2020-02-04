@@ -12,8 +12,6 @@ public class InGameState : FSMState
 
         AppFacade.instance.SendNotification(Const.Notification.GAME_STARTED);
 
-        //UIManager.instance.ShowForm("MainPanel");
-
         Debug.Log("Enter Ingame State");
     }
 }
