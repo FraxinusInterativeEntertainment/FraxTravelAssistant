@@ -42,6 +42,6 @@ public class LoginViewMediator : Mediator, IMediator
 
     private void OnTryLogin()
     {
-        SendNotification(Const.Notification.QR_SCAN_LOGIN);
+        SendNotification(Const.Notification.UPDATE_QUEST_INFO);
     }
 }

@@ -10,6 +10,7 @@ public class ServerCommunicationProxy : Proxy, IProxy
     public const string NAME = "ServerCommunicationProxy";
 
     private WebSocketService m_wsService;
+    private ServerMessage m_msgType;
    
     public ServerCommunicationProxy() : base(NAME)
     {
@@ -42,9 +43,10 @@ public class ServerCommunicationProxy : Proxy, IProxy
         Debug.Log("Websocket closed: " + _message);
     }
 
-    private void WebSocketMessageHandler(string _message)
+    public void WebSocketMessageHandler(string _message)
     {
-        Debug.Log("Message Arrived: " + _message);
+        AppFacade.instance.SendNotification(Const.Notification.LOGIN_FAIL, _message);
+        JsonToMsgType(_message);
     }
 
     private string ToJson(object _data)
@@ -54,7 +56,23 @@ public class ServerCommunicationProxy : Proxy, IProxy
 
         return json;
     }
+    private void JsonToMsgType(string _message)
+    {
+        ServerMessage obj = JsonConvert.DeserializeObject<ServerMessage>(_message);
+        if (obj.MsgType == "quest")
+        {
+            QuestInfoVO msgContent = JsonConvert.DeserializeObject<QuestInfoVO>(_message);
+            AppFacade.instance.SendNotification(Const.Notification.UPDATE_QUEST_INFO_TASK, msgContent);
+        }
+        else if(obj.MsgType == "wiki")
+        {
 
+        }
+        else if (obj.MsgType == " game_status")
+        {
+
+        }
+    }
     /*
     private string testWsSend()
     {

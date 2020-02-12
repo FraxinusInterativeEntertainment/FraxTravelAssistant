@@ -53,4 +53,8 @@ MonoBehaviour:
   - m_uiView:
       m_AssetGUID: 2926eeeed0fc2d844a0acc250ef238b4
       m_SubObjectName: 
+<<<<<<< HEAD:Assets/Prefabs/UI/UIForm/UserInfoForm.prefab
+    m_layer: 0
+=======
     m_layer: 1
+>>>>>>> ce45d319df79ad068327896bd1cba6022d682fdf:Assets/Prefabs/UI/UIForm/UserInfoForm.prefab

@@ -15,7 +15,7 @@ public class LoginCommand : SimpleCommand
 
         switch (name)
         {
-            case Const.Notification.QR_SCAN_LOGIN:
+            case Const.Notification.UPDATE_QUEST_INFO:
                 loginProxy.QrScanLogin();
                 break;
         }

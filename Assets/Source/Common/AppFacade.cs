@@ -26,7 +26,7 @@ public class AppFacade : Facade, IFacade
     {
         base.InitializeController();
         RegisterCommand(STARTUP, typeof(StartupCommand));
-        RegisterCommand(Const.Notification.QR_SCAN_LOGIN, typeof(LoginCommand));
+        RegisterCommand(Const.Notification.UPDATE_QUEST_INFO, typeof(LoginCommand));
         RegisterCommand(Const.Notification.LOAD_UI_FORM, typeof(UICommand));
         RegisterCommand(Const.Notification.LOAD_UI_ROOT_FORM, typeof(UICommand));
         RegisterCommand(Const.Notification.GO_TO_HOME_FORM, typeof(UICommand));
@@ -37,8 +37,13 @@ public class AppFacade : Facade, IFacade
         RegisterCommand(Const.Notification.LOGOUT, typeof(LogoutCommand));
         RegisterCommand(Const.Notification.CHECK_USER_INFO_EXIST, typeof(UserInfoCommand));
         RegisterCommand(Const.Notification.SUBMIT_USER_INFO, typeof(SubmitUserInfoCommand));
+<<<<<<< HEAD
+        RegisterCommand(Const.Notification.UPDATE_QUEST_INFO_TASK, typeof(QuestInfoCommand));
+        RegisterCommand(Const.Notification.UPDATE_HINT_TEXT, typeof(QuestInfoCommand));
+=======
         RegisterCommand(Const.Notification.CONNECT_TO_WS_SERVER, typeof(ServerCommunicationCommand));
         RegisterCommand(Const.Notification.SETUP_CONNECTION_WITH_SERVER, typeof(ServerCommunicationCommand));
+>>>>>>> ce45d319df79ad068327896bd1cba6022d682fdf
     }
 
     public void startup()

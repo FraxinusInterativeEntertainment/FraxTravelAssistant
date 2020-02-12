@@ -106,7 +106,11 @@ MonoBehaviour:
         m_SerializedData:
         - m_AssemblyName: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
           m_ClassName: System.Int32
+<<<<<<< HEAD
+          m_Data: 59176
+=======
           m_Data: 58794
+>>>>>>> ce45d319df79ad068327896bd1cba6022d682fdf
           m_Key: HostingServicePort
         - m_AssemblyName: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
           m_ClassName: System.String
