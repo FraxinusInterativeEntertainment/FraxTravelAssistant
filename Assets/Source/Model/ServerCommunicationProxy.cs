@@ -45,6 +45,7 @@ public class ServerCommunicationProxy : Proxy, IProxy
     private void WebSocketMessageHandler(string _message)
     {
         Debug.Log("Message Arrived: " + _message);
+        JsonToMsgType(_message);
     }
 
     private string ToJson(object _data)
@@ -54,7 +55,23 @@ public class ServerCommunicationProxy : Proxy, IProxy
 
         return json;
     }
+    private void JsonToMsgType(string _message)
+    {
+        ServerMessage obj = JsonConvert.DeserializeObject<ServerMessage>(_message);
+        if (obj.MsgType == "quest")
+        {
+            QuestInfoVO msgContent = JsonConvert.DeserializeObject<QuestInfoVO>(_message);
+            AppFacade.instance.SendNotification(Const.Notification.UPDATE_QUEST_INFO_TASK, msgContent);
+        }
+        else if (obj.MsgType == "wiki")
+        {
 
+        }
+        else if (obj.MsgType == " game_status")
+        {
+
+        }
+    }
     /*
     private string testWsSend()
     {

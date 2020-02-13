@@ -39,6 +39,7 @@ public class AppFacade : Facade, IFacade
         RegisterCommand(Const.Notification.SUBMIT_USER_INFO, typeof(SubmitUserInfoCommand));
         RegisterCommand(Const.Notification.CONNECT_TO_WS_SERVER, typeof(ServerCommunicationCommand));
         RegisterCommand(Const.Notification.SETUP_CONNECTION_WITH_SERVER, typeof(ServerCommunicationCommand));
+        RegisterCommand(Const.Notification.UPDATE_QUEST_INFO_TASK, typeof(QuestInfoCommand));
     }
 
     public void startup()
