@@ -15,6 +15,8 @@ public static partial class Const
         public const string CHECK_LOGIN_STATUS = "CheckLoginStatus";
         public const string CHECK_USER_INFO_EXIST = "CheckUserInfo";
         public const string SUBMIT_USER_INFO = "SubmitUserInfo";
+        public const string UPDATE_QUEST_INFO_TASK = "TravelTaskInfo";
+        public const string UPDATE_HINT_TEXT = "TravelHintText";
         #endregion
 
         #region Local system
