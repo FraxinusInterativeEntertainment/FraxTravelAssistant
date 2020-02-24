@@ -17,6 +17,11 @@ public static partial class Const
         public const string SUBMIT_USER_INFO = "SubmitUserInfo";
         public const string UPDATE_QUEST_INFO_TASK = "TravelTaskInfo";
         public const string UPDATE_HINT_TEXT = "TravelHintText";
+        public const string UPDATE_EMAIL_NUMBER = "WikiNumber";
+        public const string GET_EMAIL_NUM = "GetEmailNumber";
+        public const string GET_WIKI_GROUP_INFO = "GetWikiGroupInfo";
+        public const string GET_WIKI_RECORD_INFO = "GetWikiRecordInfo";
+        public const string RECEIVE_WIKI_RECORD_INFO = "ReceiveWikiRecordName";
         #endregion
 
         #region Local system

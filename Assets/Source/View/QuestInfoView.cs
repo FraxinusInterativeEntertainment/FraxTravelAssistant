@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class QuestInfoView :UIViewBase
 {
+    public event Action OnWikiButton = delegate { };
+
     [SerializeField]
     private Text m_stageTitleText;
     [SerializeField]
@@ -14,9 +16,12 @@ public class QuestInfoView :UIViewBase
     private Button m_hintButton;
     [SerializeField]
     private Text m_hintText;
+    [SerializeField]
+    private Button m_wikiButton;
     private void Start()
     {
         AppFacade.instance.RegisterMediator(new QuestInfoMediator(this));
+        m_wikiButton.onClick.AddListener(() => { OnWikiButton(); });
     }
     public void QuestInfoShow(object _date)
     {

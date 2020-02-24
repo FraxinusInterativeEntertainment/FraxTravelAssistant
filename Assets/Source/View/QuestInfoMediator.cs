@@ -12,7 +12,7 @@ public class QuestInfoMediator : Mediator, IMediator
 
     public QuestInfoMediator(QuestInfoView _View) : base(NAME, _View)
     {
-        
+        m_questInfoView.OnWikiButton += OpenEmail;
 
     }
    
@@ -22,6 +22,7 @@ public class QuestInfoMediator : Mediator, IMediator
         {
             Const.Notification.UPDATE_QUEST_INFO_TASK,
             Const.Notification.UPDATE_HINT_TEXT
+
         };
     }
     public override void HandleNotification(INotification notification)
@@ -37,5 +38,9 @@ public class QuestInfoMediator : Mediator, IMediator
                 m_questInfoView.UpdateHintText(vo); 
                 break;
         }
+    }
+    private void OpenEmail()
+    {
+        SendNotification(Const.UIViewNames.EMAILVIEW);
     }
 }
