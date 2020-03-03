@@ -12,6 +12,7 @@ public class EMailViewMediator : Mediator, IMediator
 
     public EMailViewMediator(EMailView _View) :base(NAME, _View)
     {
+        m_eMailView.OpenEmail += TryOpenEmail;
     }
     public override System.Collections.Generic.IList<string> ListNotificationInterests()
     {
