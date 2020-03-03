@@ -7,6 +7,7 @@ using System;
 public class DebugView : UIViewBase
 {
     public event Action OnLogoutButton = delegate { };
+    public event Action<string> SendMsgButton = delegate { };
 
     [SerializeField]
     private GameObject m_debugPanel;
@@ -14,6 +15,10 @@ public class DebugView : UIViewBase
     private Button m_debugButton;
     [SerializeField]
     private Button m_logoutButton;
+    [SerializeField]
+    private Button m_sendMsgButton;
+    [SerializeField]
+    private InputField m_msgInputField; 
     
     void Start()
     {
@@ -21,6 +26,7 @@ public class DebugView : UIViewBase
         
         m_debugButton.onClick.AddListener(() => { OnDebugButton(); });
         m_logoutButton.onClick.AddListener(() => { OnLogoutButton(); });
+        m_sendMsgButton.onClick.AddListener(() => { SendMsgButton(m_msgInputField.text); });
 
         m_debugPanel.SetActive(false);
     }

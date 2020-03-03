@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Images
+  m_EditorClassIdentifier: 
+  m_GroupName: Images
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 7fbd9eec6a35a094181c09720a99613e
+  m_SerializeEntries:
+  - m_GUID: 25afe53593f52e94091b5f746851e1c4
+    m_Address: Hint_QueensAve
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_mainAssetType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_GUID: 301ab45a49a65d344aab7ceb7c498126
+    m_Address: Hint_FraxinusSecretLab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_mainAssetType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_GUID: 5e5d19ed1c3cbd546aacbd0c33cd5566
+    m_Address: Hint_Syndicate
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_mainAssetType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_GUID: 6e209c7efc46a9848a5bf48c3beef96b
+    m_Address: Hint_Soylent
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_mainAssetType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_GUID: 6ef28dfbe76a18e45944670ce65d3e99
+    m_Address: Hint_Shutan
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_mainAssetType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_GUID: 87aeef2923de0fc4a915ad2fff0e9325
+    m_Address: Hint_WHPD
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_mainAssetType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: d111faaa0840a3a4dbfe6ce5aad212d0, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: b64d539d19e5e4f448214814924b6c81, type: 2}
+    - {fileID: 11400000, guid: f2da137d4b8f2f944a83613e8d92db2e, type: 2}

@@ -16,5 +16,6 @@ public class ModelPreCommand : SimpleCommand
         Facade.RegisterProxy(new WebSocketTokenProxy());
         Facade.RegisterProxy(new EMailProxy());
         Facade.RegisterProxy(new WikiRecordProxy());
+        Facade.RegisterProxy(new HintInfoProxy());
     }
 }

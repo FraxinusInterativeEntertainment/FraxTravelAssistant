@@ -33,11 +33,6 @@ public class UIManager : MonoBehaviour
         m_resourcesService = new ResourcesService();
     }
 
-    public void ShowView(string _viewName)
-    {
-        m_loadedForms[m_currentFormName].ShowView(_viewName);
-    }
-
     public void ShowLastOpenedForm()
     {
         if (m_openedForms.Count > 0)

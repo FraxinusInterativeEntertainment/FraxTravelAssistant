@@ -12,9 +12,8 @@ public abstract class UIFormBase : MonoBehaviour
     [SerializeField]
     protected List<ViewInfo> m_uiViewInfos;
     
-    protected readonly Dictionary<string, UIViewBase> m_loadedViews = new Dictionary<string, UIViewBase>();
     protected readonly Stack<UIViewBase> m_viewStack = new Stack<UIViewBase>();
-
+    protected readonly HashSet<UIViewBase> m_loadUiViews = new HashSet<UIViewBase>();
     protected virtual void Start()
     {
         InitForm();
@@ -23,6 +22,10 @@ public abstract class UIFormBase : MonoBehaviour
     public virtual void Show()
     {
         this.gameObject.SetActive(true);
+        foreach (var uiView in m_loadUiViews)
+        {
+            uiView.Show();
+        }
     }
 
     public virtual void Hide()
@@ -30,16 +33,16 @@ public abstract class UIFormBase : MonoBehaviour
         this.gameObject.SetActive(false);
     }
 
-    public virtual void ShowView(string _uiViewName)
+    public virtual void LoadView(UIViewBase m_uiViewBase)
     {
-        if (!m_loadedViews.ContainsKey(_uiViewName))
+        if (!m_loadUiViews.Contains(m_uiViewBase))
         {
-            
+            m_loadUiViews.Add(m_uiViewBase);
+            m_uiViewBase.Show();
         }
         else
         {
-            m_loadedViews[_uiViewName].Show();
-            m_viewStack.Push(m_loadedViews[_uiViewName]);
+            m_uiViewBase.Show();
         }
     }
 
@@ -88,6 +91,7 @@ public abstract class UIFormBase : MonoBehaviour
         uiView.transform.SetParent(this.transform);
         uiView.transform.SetAsFirstSibling();
         uiView.Anchor(0, 0, 0);
+        LoadView(uiView);
     }
 
     protected virtual void OnContentViewInstantiated(AsyncOperationHandle<GameObject> _obj)
@@ -95,6 +99,7 @@ public abstract class UIFormBase : MonoBehaviour
         UIViewBase uiView = _obj.Result.GetComponent<UIViewBase>();
         uiView.transform.SetParent(this.transform);
         uiView.Anchor(0, 0, 0);
+        LoadView(uiView);
     }
 }
 

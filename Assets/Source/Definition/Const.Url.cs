@@ -20,6 +20,8 @@ public static partial class Const
         public const string POST_SUBMIT_USERINFO = HTTP_SERVER_ADDRESS + "/auth/update_user_extra_info/";
         public const string GET_WS_TOKEN = HTTP_SERVER_ADDRESS + "/auth/get_ws_token/";
 
+        public const string GET_HINT = HTTP_SERVER_ADDRESS + "/game_map/get_wiki_group_info/";
+
         public const string GET_WIKI_GROUP_INFO = HTTP_SERVER_ADDRESS + "/game_map/get_wiki_group_info/";
         public const string GET_WIKI_RECORD_INFO = HTTP_SERVER_ADDRESS + " /game_map/get_wiki_info/";
         /*
