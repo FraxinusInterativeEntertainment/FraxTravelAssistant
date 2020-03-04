@@ -9,6 +9,12 @@ public class QuestInfoCommand : SimpleCommand
 
     public override void Execute(INotification _notification)
     {
-     
+        object obj = _notification.Body;
+        string name = _notification.Name;
+        switch (name)
+        {
+           
+           
+        }
     }
 }

@@ -13,6 +13,7 @@ public class DebugViewMediator : Mediator, IMediator
     public DebugViewMediator(DebugView _view) : base(NAME, _view)
     {
         m_debugView.OnLogoutButton += TryLogout;
+        m_debugView.SendMsgButton += TrySendMsg;
     }
     
     public override System.Collections.Generic.IList<string> ListNotificationInterests()
@@ -37,6 +38,11 @@ public class DebugViewMediator : Mediator, IMediator
     private void TryLogout()
     {
         SendNotification(Const.Notification.LOGOUT);
+    }
+    private void TrySendMsg(string _msg)
+    {
+        ServerCommunicationProxy serverCommunicationProxy = new ServerCommunicationProxy();
+        serverCommunicationProxy.DebugMessage(_msg);
     }
     
 }

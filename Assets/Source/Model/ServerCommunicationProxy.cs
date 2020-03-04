@@ -55,6 +55,10 @@ public class ServerCommunicationProxy : Proxy, IProxy
 
         return json;
     }
+    public  void DebugMessage(string _msg)
+    {
+        JsonToMsgType(_msg);
+    }
     private void JsonToMsgType(string _message)
     {
         ServerMessage obj = JsonConvert.DeserializeObject<ServerMessage>(_message);
@@ -65,7 +69,8 @@ public class ServerCommunicationProxy : Proxy, IProxy
         }
         else if (obj.MsgType == "wiki")
         {
-
+            HintList msgContent = JsonConvert.DeserializeObject<HintList>(_message);
+            AppFacade.instance.SendNotification(Const.Notification.UPDATE_HINT_TEXT, msgContent);
         }
         else if (obj.MsgType == " game_status")
         {

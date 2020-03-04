@@ -40,6 +40,12 @@ public class AppFacade : Facade, IFacade
         RegisterCommand(Const.Notification.CONNECT_TO_WS_SERVER, typeof(ServerCommunicationCommand));
         RegisterCommand(Const.Notification.SETUP_CONNECTION_WITH_SERVER, typeof(ServerCommunicationCommand));
         RegisterCommand(Const.Notification.UPDATE_QUEST_INFO_TASK, typeof(QuestInfoCommand));
+        RegisterCommand(Const.Notification.REQUEST_HINT_INFO, typeof(HintInfoCommand));
+        RegisterCommand(Const.Notification.BACK_HINT_INFO, typeof(HintInfoCommand));
+        RegisterCommand(Const.Notification.UPDATE_EMAIL_NUMBER, typeof(EMailCommand));
+        RegisterCommand(Const.Notification.GET_EMAIL_NUM, typeof(EMailCommand));
+        RegisterCommand(Const.Notification.GET_WIKI_RECORD_INFO, typeof(EMailCommand));
+        RegisterCommand(Const.Notification.RECEIVE_WIKI_RECORD_INFO, typeof(EMailCommand));
     }
 
     public void startup()
