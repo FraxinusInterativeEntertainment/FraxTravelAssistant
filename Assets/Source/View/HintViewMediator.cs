@@ -49,8 +49,7 @@ public class HintViewMediator : Mediator, IMediator
     }
     private void TryGetViewInfo()
     {
-        string wikiName = HintsName.Instance.hintName;
-        SendNotification(Const.Notification.REQUEST_HINT_INFO, wikiName);
+        SendNotification(Const.Notification.REQUEST_HINT_INFO);
     }
     private void TryCloseHintView()
     {

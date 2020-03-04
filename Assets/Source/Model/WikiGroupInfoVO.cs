@@ -8,14 +8,14 @@ public class WikiGroupInfoVO
     public string WikiGroupTittle { get; set; }
     public string WikiGroupImage { get; set; }
     public string WikiGroupDescription { get; set; }
-    public WikiRecordsInfo Wiki_Records { get; set; }
+    public WikiRecordsInfo Wiki_Record { get; set; }
     public WikiGroupInfoVO(string _wikiGroupName,string _wikiGroupTittle,string _wikiGroupImage,string _wikiGroupDescription, WikiRecordsInfo _wikiRecords)
     {
         WikiGroupName = _wikiGroupName;
         WikiGroupTittle = _wikiGroupTittle;
         WikiGroupImage = _wikiGroupImage;
         WikiGroupDescription = _wikiGroupDescription;
-        Wiki_Records = _wikiRecords;
+        Wiki_Record = _wikiRecords;
     }
 
 }

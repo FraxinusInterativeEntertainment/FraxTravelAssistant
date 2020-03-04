@@ -62,8 +62,8 @@ public class EMailViewMediator : Mediator, IMediator
     private void ReceiveWikiRecordInfo(object _msg)
     {
         WikiGroupInfoVO wikiGroupInfoVO = _msg as WikiGroupInfoVO;
-        m_eMailView.m_eMailPop.m_wikiRecordName.text = wikiGroupInfoVO.Wiki_Records.WikiRecordName;
-        m_eMailView.m_eMailPop.m_wikiRecordImage.sprite = Resources.Load<Sprite>("Textures/Images/Wiki/"+wikiGroupInfoVO.Wiki_Records.WikiRecordImage);
+        m_eMailView.m_eMailPop.m_wikiRecordName.text = wikiGroupInfoVO.Wiki_Record.WikiRecordName;
+        m_eMailView.m_eMailPop.m_wikiRecordImage.sprite = Resources.Load<Sprite>("Textures/Images/Wiki/"+wikiGroupInfoVO.Wiki_Record.WikiRecordImage);
     }
     public void TryOpenEmail(string _wikiGroupName)
     {

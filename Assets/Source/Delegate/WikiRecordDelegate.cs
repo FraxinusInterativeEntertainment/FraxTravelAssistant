@@ -19,7 +19,6 @@ public class WikiRecordDelegate
     {
         if (_httpResponse.err_code == 0)
         {
-            Debug.Log("_httpResponse.err_code==0");
             m_responder.OnFault(_httpResponse.err_msg);
         }
         else

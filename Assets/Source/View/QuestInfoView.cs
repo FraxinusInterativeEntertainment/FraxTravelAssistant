@@ -19,11 +19,16 @@ public class QuestInfoView :UIViewBase
     private Text m_hintText;
     [SerializeField]
     private Button m_wikiButton;
-    private void Start()
+    private void Awake()
     {
         AppFacade.instance.RegisterMediator(new QuestInfoMediator(this));
         m_wikiButton.onClick.AddListener(() => { OnWikiButton(); });
         m_hintButton.onClick.AddListener(() => { OnHintButton(m_hintText.text); });
+    }
+    public override void Show()
+    {
+        base.Show();
+        ClearLastInfo();
     }
     public void QuestInfoShow(object _date)
     {
@@ -34,5 +39,12 @@ public class QuestInfoView :UIViewBase
     public void UpdataHintText(string _hintText)
     {
         m_hintText.text = _hintText;
+    }
+    private void ClearLastInfo()
+    {
+        m_stageTitleText.text = null;
+        m_descriptionText.text = null;
+        m_hintButton.image.sprite = null;
+        m_hintText.text = null;
     }
 }

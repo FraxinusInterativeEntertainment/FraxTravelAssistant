@@ -17,6 +17,7 @@ public static partial class Const
         public const string SUBMIT_USER_INFO = "SubmitUserInfo";
         public const string UPDATE_QUEST_INFO_TASK = "TravelTaskInfo";
         public const string REQUEST_HINT_INFO = "RequestHintInfo";
+        public const string SEND_HINT_NAME = "SendHintName"; 
         public const string UPDATE_HINT_TEXT = "TravelHintText";
         public const string BACK_HINT_INFO = "BackHintInfo";
         public const string UPDATE_EMAIL_NUMBER = "WikiNumber";

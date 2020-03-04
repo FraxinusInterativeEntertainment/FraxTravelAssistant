@@ -52,7 +52,6 @@ public class ServerCommunicationProxy : Proxy, IProxy
     {
         string json = JsonConvert.SerializeObject(_data);
         Debug.Log(json);
-
         return json;
     }
     public  void DebugMessage(string _msg)
