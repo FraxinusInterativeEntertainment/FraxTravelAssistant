@@ -15,7 +15,10 @@ public class HintInfoCommand : SimpleCommand
         switch (name)
         {
             case Const.Notification.REQUEST_HINT_INFO:
-                hintInfoProxy.TryRequestHintInfo(obj.ToString());
+                hintInfoProxy.TryRequestHintInfo();
+                break;
+            case Const.Notification.SEND_HINT_NAME:
+                hintInfoProxy.RequestHintName(obj);
                 break;
 
         }

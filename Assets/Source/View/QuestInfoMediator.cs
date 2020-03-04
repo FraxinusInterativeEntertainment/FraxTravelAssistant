@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using PureMVC.Patterns;
 using PureMVC.Interfaces;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
+
 public class QuestInfoMediator : Mediator, IMediator
 {
     public const string NAME = "QuestInfoMediator";
@@ -22,7 +25,6 @@ public class QuestInfoMediator : Mediator, IMediator
         {
             Const.Notification.UPDATE_QUEST_INFO_TASK,
             Const.Notification.UPDATE_HINT_TEXT
-
         };
     }
     public override void HandleNotification(INotification notification)
@@ -41,19 +43,17 @@ public class QuestInfoMediator : Mediator, IMediator
     }
     private void OpenHintView(string _hiniName)
     {
-        if (hintLists.Count != 0)
+        SendNotification(Const.Notification.SEND_HINT_NAME, _hiniName);
+        SendNotification(Const.Notification.LOAD_UI_FORM, Const.UIFormNames.HINT_FORM);
+        hintLists.Pop();
+        if (hintLists.Count!=0)
         {
-
-            hintLists.Pop();
             m_questInfoView.UpdataHintText(hintLists.Peek());
         }
         else
         {
             m_questInfoView.m_hintButton.interactable = false;
         }
-        HintsName .Instance.hintName = _hiniName;
-        SendNotification(Const.Notification.LOAD_UI_FORM, Const.UIFormNames.HINT_FORM);
-        
     }
     private void OpenEmail()
     {
@@ -71,5 +71,11 @@ public class QuestInfoMediator : Mediator, IMediator
             }
         }
         m_questInfoView.UpdataHintText(hintLists.Peek());
+        string instateThumImage = "Hint_Thum_" + hintLists.Peek();
+        Addressables.LoadAssetAsync<Sprite>(instateThumImage).Completed += OnImageInstantiated;
+    }
+    private void OnImageInstantiated(AsyncOperationHandle<Sprite> _obj)
+    {
+        m_questInfoView.m_hintButton.image.sprite = _obj.Result;
     }
 }

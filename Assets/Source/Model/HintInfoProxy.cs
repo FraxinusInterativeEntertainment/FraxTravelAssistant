@@ -9,10 +9,14 @@ public class HintInfoProxy : Proxy, IProxy, IResponder
     public const string NAME = "HintInfoProxy";
 
     public HintInfoProxy() : base(NAME) { }
-
-    public void TryRequestHintInfo(string _hintName)
+    public string requestHintName { get; set; }
+    public void RequestHintName(object _hintName)
     {
-        HintInfoDelegate questInfoDelegate = new HintInfoDelegate(this, _hintName);
+        requestHintName = _hintName as string;
+    }
+    public void TryRequestHintInfo()
+    {
+        HintInfoDelegate questInfoDelegate = new HintInfoDelegate(this, requestHintName);
         questInfoDelegate.GetHintInfo();
     }
 
