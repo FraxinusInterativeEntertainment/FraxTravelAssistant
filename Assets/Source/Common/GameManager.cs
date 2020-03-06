@@ -8,7 +8,8 @@ public enum MainFSMStateID
     NullState = FSMState.NULL_STATE_ID,
     LoginState,
     PreGame,
-    InGame
+    InGame,
+    EndGame
 }
 
 public enum MainFSMTransition
@@ -16,7 +17,8 @@ public enum MainFSMTransition
     NullState = FSMState.NULL_STATE_ID,
     Login,
     PreGame,
-    InGame
+    InGame,
+    EndGame
 }
 
 public class GameManager : MonoBehaviour
@@ -53,17 +55,25 @@ public class GameManager : MonoBehaviour
         loginState.AddTransition((int)MainFSMTransition.InGame, (int)MainFSMStateID.InGame);
         loginState.AddTransition((int)MainFSMTransition.PreGame, (int)MainFSMStateID.PreGame);
         loginState.AddTransition((int)MainFSMTransition.Login, (int)MainFSMStateID.LoginState);
+        loginState.AddTransition((int)MainFSMTransition.EndGame, (int)MainFSMStateID.EndGame);
         m_fsmSystem.AddState(loginState);
 
         FSMState InGame = new InGameState((int)MainFSMStateID.InGame, m_fsmSystem);
         InGame.AddTransition((int)MainFSMTransition.PreGame, (int)MainFSMStateID.PreGame);
         InGame.AddTransition((int)MainFSMTransition.Login, (int)MainFSMStateID.LoginState);
+        InGame.AddTransition((int)MainFSMTransition.EndGame, (int)MainFSMStateID.EndGame);
         m_fsmSystem.AddState(InGame);
 
         FSMState PreGame = new PreGameState((int)MainFSMStateID.PreGame, m_fsmSystem);
         PreGame.AddTransition((int)MainFSMTransition.InGame, (int)MainFSMStateID.InGame);
         PreGame.AddTransition((int)MainFSMTransition.Login, (int)MainFSMStateID.LoginState);
+        PreGame.AddTransition((int)MainFSMTransition.EndGame, (int)MainFSMStateID.EndGame);
         m_fsmSystem.AddState(PreGame);
+
+        FSMState EndGame = new EndGameState((int)MainFSMStateID.EndGame,m_fsmSystem);
+        EndGame.AddTransition((int)MainFSMTransition.EndGame, (int)MainFSMStateID.EndGame);
+        EndGame.AddTransition((int)MainFSMTransition.Login, (int)MainFSMStateID.LoginState);
+        m_fsmSystem.AddState(EndGame);
 
         m_fsmSystem.PerformTransition((int)MainFSMStateID.LoginState);
     }

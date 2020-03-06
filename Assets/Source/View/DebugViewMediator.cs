@@ -14,6 +14,7 @@ public class DebugViewMediator : Mediator, IMediator
     {
         m_debugView.OnLogoutButton += TryLogout;
         m_debugView.SendMsgButton += TrySendMsg;
+        m_debugView.OnClickOpenGiveLikeView += OpenGiveLikeView;
     }
     
     public override System.Collections.Generic.IList<string> ListNotificationInterests()
@@ -45,4 +46,8 @@ public class DebugViewMediator : Mediator, IMediator
         serverCommunicationProxy.DebugMessage(_msg);
     }
     
+    private void OpenGiveLikeView()
+    {
+        SendNotification(Const.Notification.GAME_CLOSED);
+    }
 }

@@ -38,6 +38,20 @@ MonoBehaviour:
     - UIForm
     m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - m_GUID: 71ab89717d2b0774697c17ca3f030d01
+    m_Address: GiveLikeForm
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIForm
+    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_GUID: 8071eaa728e2b104c94aeb09d82a02f1
+    m_Address: HintForm
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIForm
+    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   - m_GUID: caf3f323398e2a546bcf0c176610177b
     m_Address: LoginForm
     m_ReadOnly: 0
@@ -54,13 +68,6 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   - m_GUID: e34cbf15248ea17499cfc52a86d26c63
     m_Address: UserInfoForm
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - UIForm
-    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  - m_GUID: eaf2e4c225abf4c48b85c892419b622a
-    m_Address: HintForm
     m_ReadOnly: 0
     m_SerializedLabels:
     - UIForm

@@ -38,6 +38,13 @@ public static partial class Const
 
         #region Communication
         public const string WS_SEND = "WsSend";
+
+        public const string GET_ACTOR_INFO = "GetActorInfo";
+        public const string SHOW_ACTOR_INFO = "ShowActorInfo";
+        public const string GAME_CLOSED = "GAME_CLOSED";
+
+        //old, cc code ood 
+        public const string SEND_LOGIN = "SendLogin";
         public const string CONNECT_TO_WS_SERVER = "ConnectToWsServer";
         public const string SETUP_CONNECTION_WITH_SERVER = "SetupConnectionWithServer";
         #endregion

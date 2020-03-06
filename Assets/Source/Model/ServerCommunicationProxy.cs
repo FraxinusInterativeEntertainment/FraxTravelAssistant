@@ -40,6 +40,7 @@ public class ServerCommunicationProxy : Proxy, IProxy
     private void WebSocketCloseHandler(string _message)
     {
         Debug.Log("Websocket closed: " + _message);
+        SendNotification(Const.Notification.GAME_CLOSED);
     }
 
     private void WebSocketMessageHandler(string _message)
