@@ -54,7 +54,7 @@ MonoBehaviour:
     m_mainAssetType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   - m_GUID: e2a9e682c3dc22f4aa2a6d7b636c8fe5
-    m_Address: Hint_Shutan
+    m_Address: shutan
     m_ReadOnly: 0
     m_SerializedLabels: []
     m_mainAssetType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,

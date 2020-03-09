@@ -23,6 +23,9 @@ public class MainFSMCommand : SimpleCommand
                 //SceneManager.LoadScene(Const.SceneNames.MAIN_PANEL_SCENE);
                 GameManager.instance.ChangeMainFSMState(MainFSMStateID.LoginState);
                 break;
+            case Const.Notification.GAME_CLOSED:
+                GameManager.instance.ChangeMainFSMState(MainFSMStateID.EndGame);
+                break;
         }
     }
 }

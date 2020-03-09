@@ -13,5 +13,6 @@ public static partial class Const
         public const string TRAVEL_ASSITANT_MODE_FORM = UI_FORM_PATH + "TravelAssistantModeForm";
         public const string USER_INFORMATION_FORM = UI_FORM_PATH + "UserInfoForm";
         public const string HINT_FORM = UI_FORM_PATH + "HintForm";
+        public const string GIVE_LIKE_FORM = UI_FORM_PATH + "GiveLikeForm";
     }
 }

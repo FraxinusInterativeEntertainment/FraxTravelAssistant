@@ -10,13 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: UI
+  m_Name: Instances
   m_EditorClassIdentifier: 
-  m_GroupName: Packed Assets
+  m_GroupName: Instances
   m_Data:
     m_SerializedData: []
   m_GUID: e84337692964fd04a9f9f144635e0a15
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 3c3609c8bb6f25c48894ace2bda23fd4
+    m_Address: ActorInfo
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: d111faaa0840a3a4dbfe6ce5aad212d0, type: 2}
   m_SchemaSet:

@@ -47,6 +47,9 @@ public class AppFacade : Facade, IFacade
         RegisterCommand(Const.Notification.GET_EMAIL_NUM, typeof(EMailCommand));
         RegisterCommand(Const.Notification.GET_WIKI_RECORD_INFO, typeof(EMailCommand));
         RegisterCommand(Const.Notification.RECEIVE_WIKI_RECORD_INFO, typeof(EMailCommand));
+        RegisterCommand(Const.Notification.SHOW_ACTOR_INFO, typeof(GiveLikeCommand));
+        RegisterCommand(Const.Notification.GET_ACTOR_INFO, typeof(GiveLikeCommand));
+        RegisterCommand(Const.Notification.GAME_CLOSED, typeof(MainFSMCommand));
     }
 
     public void startup()
