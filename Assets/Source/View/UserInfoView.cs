@@ -27,16 +27,13 @@ public class UserInfoView : UIViewBase
     private GameObject m_choiceTimeObj;
     [SerializeField]
     private Button m_timeChoiceButton;
-    private bool isShowChoiceTimeBool = false;
 
     [SerializeField]
     private Button m_submitButton;
     [SerializeField]
     public InputField m_nickNameInputField;  
     [SerializeField]
-    public Image m_redHightLight;
-
-   
+    private Image m_redHightLight;
 
     private void Start()
     {
@@ -55,20 +52,9 @@ public class UserInfoView : UIViewBase
         m_submitUserInfoVO.UserInfo_HeadIcon = m_heandIconButton.image.sprite.ToString();
         m_dropdown.onValueChanged.AddListener(ShowChangeUserSex);
     }
-    private void Update()
-    {
-        if (m_choiceTimeObj.activeSelf)
-        {
-            isShowChoiceTimeBool = true;
-        }
-        else
-        {
-            isShowChoiceTimeBool = false;
-        }
-    }
     public void OnClickTimeChoiceButton()
     {
-        if (!isShowChoiceTimeBool)
+        if (m_choiceTimeObj.activeSelf==false)
         {
             m_choiceTimeObj.SetActive(true);
             m_arrows.sprite = m_sprites[1];
@@ -76,7 +62,6 @@ public class UserInfoView : UIViewBase
         else
         {
             m_choiceTimeObj.SetActive(false);
-            isShowChoiceTimeBool = false;
             m_arrows.sprite = m_sprites[0];
             if (DatePickerGroup.m_selectTime.ToString("yyyy/MM/dd").Substring(0, 3) == "000")
             {
@@ -90,6 +75,7 @@ public class UserInfoView : UIViewBase
                 m_submitUserInfoVO.UserInfo_Born = m_showText.text;
             }
         }
+       
     }
     public void ShowChangeHeadIconPop()
     {
@@ -112,5 +98,9 @@ public class UserInfoView : UIViewBase
                 m_submitUserInfoVO.UserInfo_Sex = _value;
                 break;
         }
+    }
+    public void RedHightLightshow(bool _show)
+    {
+        m_redHightLight.gameObject.SetActive(_show);
     }
 }

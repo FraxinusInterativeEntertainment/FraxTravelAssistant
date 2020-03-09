@@ -33,13 +33,14 @@ public class UserInfoViewMediator : Mediator,IMediator
     {
         if (m_userInfoView.m_nickNameInputField.text != null && m_userInfoView.m_nickNameInputField.text.Length != 0)
         {
-            m_userInfoView.m_redHightLight.gameObject.SetActive(false);
+
+            m_userInfoView.RedHightLightshow(false);
             SendNotification(Const.Notification.SUBMIT_USER_INFO, m_submitUserInfoVO);
         }
         else
         {
             Debug.Log("有信息没填好");
-            m_userInfoView.m_redHightLight.gameObject.SetActive(true);
+            m_userInfoView.RedHightLightshow(true);
         }
     }
 }

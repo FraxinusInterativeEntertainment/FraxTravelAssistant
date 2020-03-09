@@ -25,8 +25,7 @@ public class GiveLikeDelegate
         actorDetailsModels.Add(actorDetailsModel3);
         actorDetailsModels.Add(actorDetailsModel4);
         actorDetailsModels.Add(actorDetailsModel5);
-        GiveLikeProxy giveLikeProxy = new GiveLikeProxy();
-        giveLikeProxy.OnResult(actorDetailsModels);
+        m_responder.OnResult(actorDetailsModels);
     }
     private void ActorInfoCallBack(ActorDetailsListResponse _httpResponse)
     {

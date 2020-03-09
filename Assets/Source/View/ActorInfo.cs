@@ -9,8 +9,10 @@ public class ActorInfo : MonoBehaviour
     private Button m_actorInfoButton;
     [SerializeField]
     private Image m_giveLikeImage;
-    public Image m_actorHeadIconImage;
-    public Text m_actorNameText;
+    [SerializeField]
+    private Image m_actorHeadIconImage;
+    [SerializeField]
+    private Text m_actorNameText;
     private bool isSelect = false;
     void Start()
     {
