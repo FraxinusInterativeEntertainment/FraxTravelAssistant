@@ -38,6 +38,20 @@ MonoBehaviour:
     - UIForm
     m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - m_GUID: 4c034edc0475c064899ac564a20d294a
+    m_Address: PersonLocationInformationForm
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIForm
+    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_GUID: 6a5caa60233b03b48b5e244a7270922a
+    m_Address: WikiTypeSelectionForm
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIForm
+    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   - m_GUID: 71ab89717d2b0774697c17ca3f030d01
     m_Address: GiveLikeForm
     m_ReadOnly: 0
@@ -45,8 +59,29 @@ MonoBehaviour:
     - UIForm
     m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - m_GUID: 723c3f61a4f58cd41b88bd80f42f66d5
+    m_Address: ForceSelectionForm
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIForm
+    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_GUID: 7314c8ccc00933b4ea4d4dd8f3e0ca11
+    m_Address: BackStoryForm
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIForm
+    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   - m_GUID: 8071eaa728e2b104c94aeb09d82a02f1
     m_Address: HintForm
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIForm
+    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_GUID: b4b63be05fbad734bb2299b8c1f55785
+    m_Address: AreaSelectionForm
     m_ReadOnly: 0
     m_SerializedLabels:
     - UIForm

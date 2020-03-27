@@ -31,6 +31,20 @@ MonoBehaviour:
     - UIView
     m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - m_GUID: 3d7da682cb87fa84d95457cc446fb517
+    m_Address: AreaSelectView
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIView
+    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_GUID: 407ef62fd4688b14aa15e9b02c327459
+    m_Address: WikiTypeSelectionView
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIView
+    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   - m_GUID: 5469eb5ea0293c7499119a4dc4f0f1a0
     m_Address: UserInfoView
     m_ReadOnly: 0
@@ -45,8 +59,22 @@ MonoBehaviour:
     - UIView
     m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - m_GUID: 7b1fb7cc98c947b44aebcf6c98dcc2ae
+    m_Address: PersonLocationInformationView
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIView
+    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   - m_GUID: 89e52c46701c1ee4abfbb0cb9abbd228
     m_Address: QuestInfoView
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIView
+    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_GUID: b495428cb3d17cc47b1a9cd535ad3a7a
+    m_Address: StoryView
     m_ReadOnly: 0
     m_SerializedLabels:
     - UIView
@@ -61,6 +89,13 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   - m_GUID: c39cca445cdef2a4eb0b34464ebaf575
     m_Address: PreGameView
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIView
+    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_GUID: ce956956dfca30a48a46aab211fa5182
+    m_Address: ForceSelectView
     m_ReadOnly: 0
     m_SerializedLabels:
     - UIView

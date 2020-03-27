@@ -24,7 +24,9 @@ public static partial class Const
         public const string GET_HINT = HTTP_SERVER_ADDRESS + "/game_map/get_wiki_group_info/";
 
         public const string GET_WIKI_GROUP_INFO = HTTP_SERVER_ADDRESS + "/game_map/get_wiki_group_info/";
-        public const string GET_WIKI_RECORD_INFO = HTTP_SERVER_ADDRESS + " /game_map/get_wiki_info/";
+        public const string GET_WIKI_RECORD_INFO = HTTP_SERVER_ADDRESS + "/game_map/get_wiki_info/";
+        public const string GET_LOCKED_WIKI_GROUP_INFO = HTTP_SERVER_ADDRESS + "/game_map/get_available_wiki_group_list/";
+
 
         public const string GET_GIVELIKE = HTTP_SERVER_ADDRESS + " /game_map/get_current_game_group_user/";
         /*

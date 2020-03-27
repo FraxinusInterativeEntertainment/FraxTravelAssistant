@@ -12,8 +12,7 @@ public class WikiRecordProxy : Proxy, IProxy, IResponder
 
     public void TryGetWikiRecordInfo(string _wikiName)
     {
-        WikiRecordDelegate wikiRecordDelegate = new WikiRecordDelegate(this, _wikiName);
-        wikiRecordDelegate.GetWikiRecordInfo();
+       
     }
     public void OnResult(object _data)
     {

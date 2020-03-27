@@ -14,5 +14,10 @@ public static partial class Const
         public const string USER_INFORMATION_FORM = UI_FORM_PATH + "UserInfoForm";
         public const string HINT_FORM = UI_FORM_PATH + "HintForm";
         public const string GIVE_LIKE_FORM = UI_FORM_PATH + "GiveLikeForm";
+        public const string WIKI_TYPE_SELECTION_FORM = UI_FORM_PATH + "WikiTypeSelectionForm";
+        public const string AREA_SELECTION_FORM = UI_FORM_PATH + "AreaSelectionForm";
+        public const string FORCE_SELECTION_FORM = UI_FORM_PATH + "ForceSelectionForm";
+        public const string STORY_FORM = UI_FORM_PATH + "BackStoryForm";
+        public const string PERSON_LOCATION_INFO_FORM = UI_FORM_PATH + "PersonLocationInformationForm";
     }
 }
