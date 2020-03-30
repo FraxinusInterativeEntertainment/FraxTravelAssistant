@@ -39,15 +39,7 @@ public class ForceSelectViewMediator : Mediator, IMediator
         AvailableWikiGroupInfo[] availableWikiGroupInfos = _obj as AvailableWikiGroupInfo[];
         for (int i = 0; i < availableWikiGroupInfos.Length; i++)
         {
-            if (availableWikiGroupInfos[i].unlocked == true)
-            {
-                m_forceView.ShowButtonTest(i, availableWikiGroupInfos[i].name, true);
-            }
-            else
-            {
-                m_forceView.ShowButtonTest(i, "???", false);
-                
-            }
+            m_forceView.CheckWikiName(availableWikiGroupInfos[i].name, availableWikiGroupInfos[i].unlocked);
         }
     }
     private void OpenStoryView(string _text)

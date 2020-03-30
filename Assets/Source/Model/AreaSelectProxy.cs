@@ -25,7 +25,7 @@ public class AreaSelectProxy : Proxy, IProxy, IResponder
     }
     public void OnFault(object _data)
     {
-        
+        Debug.Log("服务返回错误执行的");
     }
 }
 

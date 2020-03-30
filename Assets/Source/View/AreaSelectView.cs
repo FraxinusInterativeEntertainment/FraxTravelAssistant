@@ -19,18 +19,24 @@ public class AreaSelectView : UIViewBase
         Clear();
         RequestWikiGroupViewInfo();
     }
-    public void ShowButtonTest(int _index,string _text,bool _isShow)
+    public void CheckWikiName(string _wikiName,bool _isShow)
     {
-        m_allButtons.GetChild(_index).GetChild(0).GetComponent<Text>().text = _text;
-        if (_isShow==true)
+        for (int i = 0; i < m_allButtons.childCount; i++)
         {
-            m_allButtons.GetChild(_index).GetComponent<Button>().interactable = true;
-            m_allButtons.GetChild(_index).GetComponent<Button>().onClick.AddListener(() => { OpenStoryView(_text); });
-        }
-        else
-        {
-            m_allButtons.GetChild(_index).GetComponent<Button>().onClick.RemoveListener(() => { OpenStoryView(_text); });
-            m_allButtons.GetChild(_index).GetComponent<Button>().interactable = false;
+            if (m_allButtons.GetChild(i).gameObject.name.Contains(_wikiName))
+            {
+                m_allButtons.GetChild(i).GetChild(0).GetComponent<Text>().text = _wikiName;
+                if (_isShow==true)
+                {
+                    m_allButtons.GetChild(i).GetComponent<Button>().interactable = true;
+                    m_allButtons.GetChild(i).GetComponent<Button>().onClick.AddListener(() => { OpenStoryView(_wikiName); });
+                }
+                else
+                {
+                    m_allButtons.GetChild(i).GetComponent<Button>().onClick.RemoveListener(() => { OpenStoryView(_wikiName); });
+                    m_allButtons.GetChild(i).GetComponent<Button>().interactable = false;
+                }
+            }
         }
     }
     private void Clear()

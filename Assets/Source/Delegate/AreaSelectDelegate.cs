@@ -6,10 +6,11 @@ public class AreaSelectDelegate
 {
     private IResponder m_responder;
     private HttpService m_httpService;
+    public const string LOCATION_WIKI_TYPE= "?wiki_type=1";
     public AreaSelectDelegate(IResponder _responder)
     {
         m_responder = _responder;
-        m_httpService = new HttpService(Const.Url.GET_LOCKED_WIKI_GROUP_INFO+ "?wiki_type=1", HttpRequestType.Get);
+        m_httpService = new HttpService(Const.Url.GET_LOCKED_WIKI_GROUP_INFO+ LOCATION_WIKI_TYPE, HttpRequestType.Get);
     }
     public void GetLockedWikiGroupInfo()
     {
