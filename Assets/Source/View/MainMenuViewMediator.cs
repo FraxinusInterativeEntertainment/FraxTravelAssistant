@@ -13,6 +13,7 @@ public class MainMenuViewMediator : Mediator, IMediator
     public MainMenuViewMediator(MainMenuView _view) : base(NAME, _view)
     {
         m_mainMenuView.OnAssisantModeButton += ShowAssistantModeWindow;
+        m_mainMenuView.OnWorldBackGroundButton += ShowWorldBackGroundWindow;
     }
 
     public override System.Collections.Generic.IList<string> ListNotificationInterests()
@@ -37,5 +38,9 @@ public class MainMenuViewMediator : Mediator, IMediator
     public void ShowAssistantModeWindow()
     {
         AppFacade.instance.SendNotification(Const.Notification.LOAD_UI_FORM, Const.UIFormNames.TRAVEL_ASSITANT_MODE_FORM);
+    }
+    public void ShowWorldBackGroundWindow()
+    {
+        AppFacade.instance.SendNotification(Const.Notification.LOAD_UI_FORM, Const.UIFormNames.WIKI_TYPE_SELECTION_FORM);
     }
 }

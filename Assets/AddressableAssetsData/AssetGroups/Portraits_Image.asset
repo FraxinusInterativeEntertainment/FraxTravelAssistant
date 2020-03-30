@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Images
+  m_Name: Portraits_Image
   m_EditorClassIdentifier: 
-  m_GroupName: Images
+  m_GroupName: Portraits_Image
   m_Data:
     m_SerializedData: []
   m_GUID: 7fbd9eec6a35a094181c09720a99613e
@@ -24,7 +24,7 @@ MonoBehaviour:
     m_mainAssetType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   - m_GUID: 301ab45a49a65d344aab7ceb7c498126
-    m_Address: Hint_Thum_FraxinusSecretLab
+    m_Address: dr_nick_hideout
     m_ReadOnly: 0
     m_SerializedLabels: []
     m_mainAssetType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -48,7 +48,7 @@ MonoBehaviour:
     m_mainAssetType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   - m_GUID: 87aeef2923de0fc4a915ad2fff0e9325
-    m_Address: Hint_Thum_WHPD
+    m_Address: Hint_Thum_FraxinusSecretLab
     m_ReadOnly: 0
     m_SerializedLabels: []
     m_mainAssetType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,

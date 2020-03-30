@@ -9,22 +9,21 @@ public class WikiRecordDelegate
     public WikiRecordDelegate(IResponder _responder, string _wikiRecordName)
     {
         m_responder = _responder;
-        m_httpService = new HttpService(Const.Url.GET_WIKI_RECORD_INFO + "?" + _wikiRecordName, HttpRequestType.Get);
+        m_httpService = new HttpService(Const.Url.GET_WIKI_RECORD_INFO + "?wiki_name=" + _wikiRecordName, HttpRequestType.Get);
     }
-    public void GetWikiRecordInfo()
+    public void TryGetWikiRecordInfo()
     {
-        m_httpService.SendRequest<HttpResponse>(WikiRecordInfoCallback);
+        m_httpService.SendRequest<WikiRecordResponse>(WikiRecordInfoCallback);
     }
-    private void WikiRecordInfoCallback(HttpResponse _httpResponse)
+    private void WikiRecordInfoCallback(WikiRecordResponse _httpResponse)
     {
         if (_httpResponse.err_code == 0)
         {
-            m_responder.OnFault(_httpResponse.err_msg);
+            m_responder.OnResult(_httpResponse.err_msg);
         }
         else
         {
-            Debug.Log(_httpResponse.err_msg);
-            m_responder.OnResult(_httpResponse.err_msg);
+            Debug.Log("_httpResponse.err_code" + _httpResponse.err_msg);
         }
     }
 }

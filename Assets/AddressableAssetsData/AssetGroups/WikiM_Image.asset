@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: WikiM_Image
+  m_EditorClassIdentifier: 
+  m_GroupName: WikiM_Image
+  m_Data:
+    m_SerializedData: []
+  m_GUID: ea128e86521c5fb4c88887ec5f63d44a
+  m_SerializeEntries: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: d111faaa0840a3a4dbfe6ce5aad212d0, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 0eff6f6a7d570404088fa1ed886bf9dc, type: 2}
+    - {fileID: 11400000, guid: 8ed7d849fc7301c41a5e813a5cbb2922, type: 2}

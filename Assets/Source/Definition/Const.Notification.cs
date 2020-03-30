@@ -25,6 +25,16 @@ public static partial class Const
         public const string GET_WIKI_GROUP_INFO = "GetWikiGroupInfo";
         public const string GET_WIKI_RECORD_INFO = "GetWikiRecordInfo";
         public const string RECEIVE_WIKI_RECORD_INFO = "ReceiveWikiRecordName";
+
+        public const string GET_AREA_LOCK_WIKI_GROUP_INFO = "GetAreaLockWikiGroupInfo";
+        public const string GET_FORCE_LOCK_WIKI_GROUP_INFO = "GetForceLockWikiGroupInfo";
+        public const string BACK_AVAILABLE_AREA_WIKI_GROUP_INFO = "BackAvailableaAreaWikiGroup";
+        public const string BACK_AVAILABLE_FORCE_WIKI_GROUP_INFO = "BackAvailableaForceWikiGroup";
+        public const string SEND_WIKI_GROUP_NAME = "SendWikiGroupName";
+        public const string GET_WIKI_GROUP_BACKGROUND_STORY = "GetWikiGroupBackStory";
+        public const string BACK_BACKGROUND_STORY="BackGroundStory";
+        public const string GET_WIKI_RECORD_STORY = "GetWikiRecordStory";
+        public const string BACK_WIKI_RECORD_STORY = "BackWikiRecordStory";
         #endregion
 
         #region Local system

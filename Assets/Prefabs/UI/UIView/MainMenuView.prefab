@@ -1115,7 +1115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_assistantModeButton: {fileID: 6507307093467113958}
-  m_wikiButton: {fileID: 6902677277199577369}
+  m_worldBackGround: {fileID: 6902677277199577369}
 --- !u!1 &6543707743172379125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1226,7 +1226,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 145, y: -305}
+  m_AnchoredPosition: {x: 142, y: -305}
   m_SizeDelta: {x: 320, y: 245.1}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &5403932130565729357

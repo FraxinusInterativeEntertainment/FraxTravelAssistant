@@ -43,6 +43,11 @@ public class AppFacade : Facade, IFacade
         RegisterCommand(Const.Notification.REQUEST_HINT_INFO, typeof(HintInfoCommand));
         RegisterCommand(Const.Notification.SEND_HINT_NAME, typeof(HintInfoCommand));
         RegisterCommand(Const.Notification.BACK_HINT_INFO, typeof(HintInfoCommand));
+        RegisterCommand(Const.Notification.GET_AREA_LOCK_WIKI_GROUP_INFO, typeof(AreaSelectCommand));
+        RegisterCommand(Const.Notification.GET_FORCE_LOCK_WIKI_GROUP_INFO, typeof(ForceSelectCommand));
+        RegisterCommand(Const.Notification.GET_WIKI_GROUP_BACKGROUND_STORY, typeof(BackGroundStoryCommand));
+        RegisterCommand(Const.Notification.GET_WIKI_RECORD_STORY, typeof(PersonLocationInformationCommand));
+        RegisterCommand(Const.Notification.SEND_WIKI_GROUP_NAME, typeof(AreaSelectCommand));
         RegisterCommand(Const.Notification.UPDATE_EMAIL_NUMBER, typeof(EMailCommand));
         RegisterCommand(Const.Notification.GET_EMAIL_NUM, typeof(EMailCommand));
         RegisterCommand(Const.Notification.GET_WIKI_RECORD_INFO, typeof(EMailCommand));
