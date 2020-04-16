@@ -26,6 +26,7 @@ public class SubmitUserInfoDelegate
     {
         if (_httpResponse.err_code==0)
         {
+            Debug.Log( _httpResponse.err_msg);
             m_responder.OnResult(_httpResponse.err_code);
         }
         else

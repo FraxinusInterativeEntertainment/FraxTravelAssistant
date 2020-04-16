@@ -21,6 +21,7 @@ public class SubmitUserInfoProxy : Proxy, IProxy, IResponder
 
     void IResponder.OnResult(object _data)
     {
+        AppFacade.instance.SendNotification(Const.Notification.LOAD_UI_ROOT_FORM, Const.UIFormNames.PRE_GAME_FORM);
         Debug.Log("User information 提交成功" + _data as string);
     }
 }

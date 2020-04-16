@@ -14,11 +14,11 @@ public class GiveLikeDelegate
     }
     public void GetActorInfo()
     {
-        ActorDetailsModel actorDetailsModel1 = new ActorDetailsModel("001","xiaoLiu", "portrait_1");
-        ActorDetailsModel actorDetailsModel2 = new ActorDetailsModel("002", "zhangjie", "portrait_2");
-        ActorDetailsModel actorDetailsModel3 = new ActorDetailsModel("003", "peter", "portrait_3");
-        ActorDetailsModel actorDetailsModel4 = new ActorDetailsModel("004", "Mayun", "portrait_4");
-        ActorDetailsModel actorDetailsModel5 = new ActorDetailsModel("005", "MaHuaTeng", "portrait_5");
+        ActorDetailsModel actorDetailsModel1 = new ActorDetailsModel("1","xiaoLiu", "portrait_1");
+        ActorDetailsModel actorDetailsModel2 = new ActorDetailsModel("2", "zhangjie", "portrait_2");
+        ActorDetailsModel actorDetailsModel3 = new ActorDetailsModel("3", "peter", "portrait_3");
+        ActorDetailsModel actorDetailsModel4 = new ActorDetailsModel("4", "Mayun", "portrait_4");
+        ActorDetailsModel actorDetailsModel5 = new ActorDetailsModel("5", "MaHuaTeng", "portrait_5");
         List<ActorDetailsModel> actorDetailsModels = new List<ActorDetailsModel>();
         actorDetailsModels.Add(actorDetailsModel1);
         actorDetailsModels.Add(actorDetailsModel2);

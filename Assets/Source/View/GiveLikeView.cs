@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.AddressableAssets;
 
 public class GiveLikeView : UIViewBase
 {
     public event Action GetGiveLikeInfo = delegate { };
+    public event Action<string> GetActorID = delegate { };
     [SerializeField]
     public Button m_continue;
     [SerializeField]
@@ -16,6 +14,7 @@ public class GiveLikeView : UIViewBase
     void Awake()
     {
         AppFacade.instance.RegisterMediator(new GiveLikeViewMediator(this));
+        AppFacade.instance.RegisterMediator(new GiveLikeMediator(this));
         m_continue.onClick.AddListener(GoOnAndContinue);
     }
     public override void Show()
@@ -38,5 +37,9 @@ public class GiveLikeView : UIViewBase
     private void GoOnAndContinue()
     {
         transform.gameObject.SetActive(false);
+    }
+    public void ReceiveActorID(string _actorId)
+    {
+        GetActorID(_actorId);
     }
 }

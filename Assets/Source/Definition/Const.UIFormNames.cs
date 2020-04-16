@@ -19,5 +19,6 @@ public static partial class Const
         public const string FORCE_SELECTION_FORM = UI_FORM_PATH + "ForceSelectionForm";
         public const string STORY_FORM = UI_FORM_PATH + "BackStoryForm";
         public const string PERSON_LOCATION_INFO_FORM = UI_FORM_PATH + "PersonLocationInformationForm";
+        public const string EDIT_USER_INFO_FORM = UI_FORM_PATH + "EditUserInfoForm";
     }
 }

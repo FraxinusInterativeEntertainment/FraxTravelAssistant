@@ -129,6 +129,13 @@ MonoBehaviour:
     - UIView
     m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - m_GUID: f058d4bb700b22b45a8c88cf28ce943d
+    m_Address: EditUserInfoView
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIView
+    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   - m_GUID: f1ca8812d4bbfdc44bd1b1bc49c6e4dd
     m_Address: HintView
     m_ReadOnly: 0

@@ -8,12 +8,17 @@ public class UserInfoView : UIViewBase
 {
     public event Action OnClickChangeHeadIconButton = delegate { };
     public event Action<SubmitUserInfoVO> OnClickSubmitUserInfo = delegate { };
-    
+    public event Action<string> OnClickSetIconName = delegate { };
+
     private SubmitUserInfoVO m_submitUserInfoVO;
     [SerializeField]
-    private Button m_heandIconButton;
+    private Button m_headIconButton;
+    [SerializeField]
+    public Transform m_protShowContent;
     [SerializeField]
     private GameObject m_headIconPop;
+    [SerializeField]
+    private Button m_closeHeadIconPopBtn;
     [SerializeField]
     private Dropdown m_dropdown;
 
@@ -34,12 +39,12 @@ public class UserInfoView : UIViewBase
     public InputField m_nickNameInputField;  
     [SerializeField]
     private Image m_redHightLight;
-
+    
     private void Start()
     {
         AppFacade.instance.RegisterMediator(new UserInfoViewMediator(this));
 
-        m_heandIconButton.onClick.AddListener(() => { OnClickChangeHeadIconButton(); });
+        m_headIconButton.onClick.AddListener(() => { OnClickChangeHeadIconButton(); });
         m_timeChoiceButton.onClick.AddListener(() => { OnClickTimeChoiceButton(); });
         m_submitButton.onClick.AddListener(() => { OnClickSubmitUserInfo(m_submitUserInfoVO); });
         m_showText.text = DateTime.Now.ToString("yyyy/MM/dd");
@@ -48,8 +53,7 @@ public class UserInfoView : UIViewBase
         m_submitUserInfoVO = new SubmitUserInfoVO();
         m_submitUserInfoVO.UserInfo_Born = m_showText.text;
         m_nickNameInputField.onValueChanged.AddListener((string _text) => { m_submitUserInfoVO.UserInfo_NickName = _text; });
-        //这里直接吧初始头像名字传进去，后续改
-        m_submitUserInfoVO.UserInfo_HeadIcon = m_heandIconButton.image.sprite.ToString();
+       
         m_dropdown.onValueChanged.AddListener(ShowChangeUserSex);
     }
     public void OnClickTimeChoiceButton()
@@ -77,9 +81,29 @@ public class UserInfoView : UIViewBase
         }
        
     }
-    public void ShowChangeHeadIconPop()
+    public void ShowChangeHeadIconPop(bool _isShow)
     {
-        m_headIconPop.SetActive(!m_headIconPop.activeSelf);
+        m_headIconPop.SetActive(_isShow);
+        if (_isShow==true)
+        {
+            m_closeHeadIconPopBtn.onClick.AddListener(ChangeHeadIconPop);
+            for (int i = 0; i < m_protShowContent.childCount; i++)
+            {
+                string name = m_protShowContent.GetChild(i).GetComponent<Image>().sprite.ToString();
+                m_protShowContent.GetChild(i).GetComponent<Button>().onClick.AddListener(() => { OnClickSetIconName(name); });
+            }
+        }
+    }
+    private void ChangeHeadIconPop()
+    {
+        ShowChangeHeadIconPop(false);
+    }
+    public void ChangeIcon(Sprite _icon)
+    {
+        
+        m_headIconButton.image.sprite = _icon;
+        m_submitUserInfoVO.UserInfo_HeadIcon = m_headIconButton.image.sprite.ToString();
+        Debug.Log(m_submitUserInfoVO.UserInfo_HeadIcon);
     }
     private void ShowChangeUserSex(int _value)
     {
@@ -102,5 +126,13 @@ public class UserInfoView : UIViewBase
     public void RedHightLightshow(bool _show)
     {
         m_redHightLight.gameObject.SetActive(_show);
+    }
+    private void OnDestroy()
+    {
+        m_headIconPop.SetActive(false);
+        for (int i = 0; i < m_protShowContent.childCount; i++)
+        {
+            m_protShowContent.GetChild(i).GetComponent<Button>().onClick.RemoveAllListeners();
+        }
     }
 }

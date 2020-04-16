@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class GiveLikeProxy : Proxy, IProxy, IResponder
 {
-    public const string NAEM = "GiveLikeProxy";
+    public const string NAME = "GiveLikeProxy";
 
     public GiveLikeProxy() : base(NAME) { }
 

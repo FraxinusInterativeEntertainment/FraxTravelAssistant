@@ -36,6 +36,7 @@ public class AppFacade : Facade, IFacade
         RegisterCommand(Const.Notification.CHECK_LOGIN_STATUS, typeof(LoginStatusCommand));
         RegisterCommand(Const.Notification.LOGOUT, typeof(LogoutCommand));
         RegisterCommand(Const.Notification.CHECK_USER_INFO_EXIST, typeof(UserInfoCommand));
+        RegisterCommand(Const.Notification.EDIT_USER_USER_INFO, typeof(EditUserInfoCommand));
         RegisterCommand(Const.Notification.SUBMIT_USER_INFO, typeof(SubmitUserInfoCommand));
         RegisterCommand(Const.Notification.CONNECT_TO_WS_SERVER, typeof(ServerCommunicationCommand));
         RegisterCommand(Const.Notification.SETUP_CONNECTION_WITH_SERVER, typeof(ServerCommunicationCommand));
@@ -54,6 +55,7 @@ public class AppFacade : Facade, IFacade
         RegisterCommand(Const.Notification.RECEIVE_WIKI_RECORD_INFO, typeof(EMailCommand));
         RegisterCommand(Const.Notification.SHOW_ACTOR_INFO, typeof(GiveLikeCommand));
         RegisterCommand(Const.Notification.GET_ACTOR_INFO, typeof(GiveLikeCommand));
+        RegisterCommand(Const.Notification.SET_ACTOR_ID, typeof(GiveLikeCommand2));
         RegisterCommand(Const.Notification.GAME_CLOSED, typeof(MainFSMCommand));
     }
 

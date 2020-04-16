@@ -18,10 +18,11 @@ public class ModelPreCommand : SimpleCommand
         Facade.RegisterProxy(new WikiRecordProxy());
         Facade.RegisterProxy(new HintInfoProxy());
         Facade.RegisterProxy(new GiveLikeProxy());
+        Facade.RegisterProxy(new GiveLikeProxy2());
         Facade.RegisterProxy(new AreaSelectProxy());
         Facade.RegisterProxy(new ForceSelectProxy());
         Facade.RegisterProxy(new BackGroundStoryProxy());
         Facade.RegisterProxy(new PersonLocationInformationProxy());
-
+        Facade.RegisterProxy(new EditUserInfoProxy());
     }
 }

@@ -80,6 +80,13 @@ MonoBehaviour:
     - UIForm
     m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - m_GUID: 83c6c2e1fceeca044ac16cfd2924ffa1
+    m_Address: EditUserInfoForm
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIForm
+    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   - m_GUID: b4b63be05fbad734bb2299b8c1f55785
     m_Address: AreaSelectionForm
     m_ReadOnly: 0

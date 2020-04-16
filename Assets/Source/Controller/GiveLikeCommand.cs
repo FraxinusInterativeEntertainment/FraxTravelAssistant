@@ -11,7 +11,6 @@ public class GiveLikeCommand : SimpleCommand
         GiveLikeProxy giveLikeProxy;
         giveLikeProxy = Facade.RetrieveProxy(GiveLikeProxy.NAME) as GiveLikeProxy;
         string name = _notification.Name;
-
         switch (name)
         {
             case Const.Notification.GET_ACTOR_INFO:

@@ -23,7 +23,7 @@ public class LoginProxy : Proxy, IProxy, IResponder
 #endif
 
 #if UNITY_EDITOR
-        SendLogin(new LoginVO("20200323a", "TestUWB456"));
+        SendLogin(new LoginVO("20200403a", "TestUWB456"));
 #endif
     }
 
