@@ -11,27 +11,17 @@ public class UserInfoViewMediator : Mediator,IMediator
 {
     public const string NAME = "UserInfoViewMediator";
 
-
     private UserInfoView m_userInfoView { get { return m_viewComponent as UserInfoView; } }
 
     public UserInfoViewMediator(UserInfoView _View):base(NAME,_View)
     {
-        m_userInfoView.OnClickChangeHeadIconButton += ChangeHeadIcon;
         m_userInfoView.OnClickSubmitUserInfo += SubmitUserInfo;
         m_userInfoView.OnClickSetIconName += SetHeadIcon;
+        m_userInfoView.InstateIconSprites+= TryInstateIconSprites;
     }
     public override void HandleNotification(INotification notification)
     {
         base.HandleNotification(notification);
-    }
-    public void ChangeHeadIcon()
-    {
-        m_userInfoView.ShowChangeHeadIconPop(true);
-    }
-    private void OnImageInstantiated(AsyncOperationHandle<GameObject> _obj)
-    {
-        Protrait protInfo = _obj.Result.GetComponent<Protrait>();
-        protInfo.transform.SetParent(m_userInfoView.m_protShowContent);
     }
     public void SubmitUserInfo(SubmitUserInfoVO m_submitUserInfoVO)
     {
@@ -49,8 +39,7 @@ public class UserInfoViewMediator : Mediator,IMediator
     }
     private void SetHeadIcon(string _iconName)
     {
-        m_userInfoView.ShowChangeHeadIconPop(false);
-        Debug.Log("传过来的==" + _iconName.ToString());
+        m_userInfoView.ChangeHeadIconPop();
         Addressables.LoadAssetAsync<Sprite>(_iconName).Completed += OnImageInstantiated;
     }
     private void OnImageInstantiated(AsyncOperationHandle<Sprite> _obj)
@@ -59,4 +48,38 @@ public class UserInfoViewMediator : Mediator,IMediator
         m_userInfoView.ChangeIcon(sprite);
        
     }
-}
+    private void TryInstateIconSprites()
+    {
+        Addressables.LoadAssetsAsync<Sprite>(m_userInfoView.m_portrait,null).Completed += TextureLoaded;
+    }
+    IList<Sprite> sprites;
+    List<string> spriteName = new List<string>();
+    int index = 0,i=0;
+    void TextureLoaded(AsyncOperationHandle<IList<Sprite>> obj)
+    {
+        sprites =obj.Result;
+        for (int i = 0; i < sprites.Count; i++)
+        {
+            spriteName.Add(sprites[i].name);
+            Addressables.InstantiateAsync("HeadIcon").Completed += HeadIconInstantiated;
+        }
+    }
+    private void HeadIconInstantiated(AsyncOperationHandle<GameObject> _obj)
+    {
+        Addressables.LoadAssetAsync<Sprite>(spriteName[index] + " (UnityEngine.Sprite)").Completed += PortraitInstantiated;
+        index++;
+        Image headIcon = _obj.Result.GetComponent<Image>();
+        headIcon.transform.SetParent(m_userInfoView.m_protShowContent);
+        headIcon.transform.GetComponent<Button>().onClick.AddListener(() => { SetHeadIcon(headIcon.transform.GetComponent<Image>().sprite.ToString());  });
+    }
+    private void PortraitInstantiated(AsyncOperationHandle<Sprite> _obj)
+    {
+        SetItselfSprite(_obj.Result);
+        i++;
+    }
+    private void SetItselfSprite(Sprite _sprite)
+    {
+        m_userInfoView.m_protShowContent.GetChild(i).GetComponent<Image>().sprite = _sprite;
+    }
+ }
+

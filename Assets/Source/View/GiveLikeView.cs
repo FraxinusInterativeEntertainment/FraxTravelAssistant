@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +12,8 @@ public class GiveLikeView : UIViewBase
     [SerializeField]
     public Transform m_actorInfoShowContent;
     public ActorInfo m_actorInfo;
+    [SerializeField]
+    private Text m_submitText;
     void Awake()
     {
         AppFacade.instance.RegisterMediator(new GiveLikeViewMediator(this));
@@ -24,7 +27,7 @@ public class GiveLikeView : UIViewBase
     }
     public void ContinueShow()
     {
-        if (m_continue.gameObject.activeSelf==false)
+        if (m_continue.gameObject.activeSelf == false)
         {
             m_continue.gameObject.SetActive(true);
             m_continue.transform.SetAsLastSibling();
@@ -43,3 +46,4 @@ public class GiveLikeView : UIViewBase
         GetActorID(_actorId);
     }
 }
+

@@ -16,10 +16,12 @@ public class GiveLikeProxy2 : Proxy, IProxy, IResponder
     public void OnFault(object _data)
     {
         Debug.Log("提交失败" + _data as string);
+        AppFacade.instance.SendNotification(Const.Notification.BACK_SUBMIT_INFO, _data);
     }
 
     public void OnResult(object _data)
     {
         Debug.Log("提交成功"+ _data as string);
+        AppFacade.instance.SendNotification(Const.Notification.BACK_SUBMIT_INFO, _data);
     }
 }

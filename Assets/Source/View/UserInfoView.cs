@@ -1,12 +1,13 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using UnityEngine.UI;
 
 public class UserInfoView : UIViewBase
 {
     public event Action OnClickChangeHeadIconButton = delegate { };
+    public event Action InstateIconSprites = delegate { };
+    public event Action ReleaseIconSprites = delegate { };
     public event Action<SubmitUserInfoVO> OnClickSubmitUserInfo = delegate { };
     public event Action<string> OnClickSetIconName = delegate { };
 
@@ -39,12 +40,13 @@ public class UserInfoView : UIViewBase
     public InputField m_nickNameInputField;  
     [SerializeField]
     private Image m_redHightLight;
-    
+    public AssetLabelReference m_portrait;
+    public bool isInstate = false;
     private void Start()
     {
         AppFacade.instance.RegisterMediator(new UserInfoViewMediator(this));
 
-        m_headIconButton.onClick.AddListener(() => { OnClickChangeHeadIconButton(); });
+        m_headIconButton.onClick.AddListener(() => { ShowChangeHeadIconPop(); });
         m_timeChoiceButton.onClick.AddListener(() => { OnClickTimeChoiceButton(); });
         m_submitButton.onClick.AddListener(() => { OnClickSubmitUserInfo(m_submitUserInfoVO); });
         m_showText.text = DateTime.Now.ToString("yyyy/MM/dd");
@@ -81,29 +83,30 @@ public class UserInfoView : UIViewBase
         }
        
     }
-    public void ShowChangeHeadIconPop(bool _isShow)
+    public void ShowChangeHeadIconPop()
     {
-        m_headIconPop.SetActive(_isShow);
-        if (_isShow==true)
+        if (isInstate==false)
         {
+            m_headIconPop.SetActive(true);
             m_closeHeadIconPopBtn.onClick.AddListener(ChangeHeadIconPop);
-            for (int i = 0; i < m_protShowContent.childCount; i++)
-            {
-                string name = m_protShowContent.GetChild(i).GetComponent<Image>().sprite.ToString();
-                m_protShowContent.GetChild(i).GetComponent<Button>().onClick.AddListener(() => { OnClickSetIconName(name); });
-            }
+            InstateIconSprites();
+            isInstate = true;
+        }
+        else
+        {
+            m_headIconPop.SetActive(true);
         }
     }
-    private void ChangeHeadIconPop()
+   
+    public void ChangeHeadIconPop()
     {
-        ShowChangeHeadIconPop(false);
+        m_headIconPop.SetActive(false);
     }
     public void ChangeIcon(Sprite _icon)
     {
         
         m_headIconButton.image.sprite = _icon;
         m_submitUserInfoVO.UserInfo_HeadIcon = m_headIconButton.image.sprite.ToString();
-        Debug.Log(m_submitUserInfoVO.UserInfo_HeadIcon);
     }
     private void ShowChangeUserSex(int _value)
     {

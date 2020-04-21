@@ -44,7 +44,6 @@ public class EditUserInfoViewMediator : Mediator, IMediator
         UserExtraInfo userExtraInfo = _obj as UserExtraInfo;
         m_editUserInfoView.ShowUserInfo(userExtraInfo);
         string imageName = userExtraInfo.avatar;
-        Debug.Log("ImageName==" + imageName);
         Addressables.LoadAssetAsync<Sprite>(imageName).Completed += OnImageInstantiated;
     }
     private void OnImageInstantiated(AsyncOperationHandle<Sprite> _obj)
