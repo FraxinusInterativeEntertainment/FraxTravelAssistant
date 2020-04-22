@@ -45,6 +45,6 @@ public class NavigationBarViewMediator : Mediator, IMediator
     }
     public void UserInfo()
     {
-        AppFacade.instance.SendNotification(Const.Notification.LOAD_UI_FORM, Const.UIFormNames.USER_INFORMATION_FORM);
+        AppFacade.instance.SendNotification(Const.Notification.LOAD_UI_FORM, Const.UIFormNames.EDIT_USER_INFO_FORM);
     }
 }

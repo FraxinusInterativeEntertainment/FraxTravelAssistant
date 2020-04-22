@@ -52,7 +52,9 @@ public class GiveLikeViewMediator : Mediator, IMediator
     {
         ActorInfo actorInfo = _obj.Result.GetComponent<ActorInfo>();
         actorInfo.transform.SetParent(m_giveLikeView.m_actorInfoShowContent);
-        actorInfo.Show(actorList[index++]);
+        actorInfo.ShowName(actorList[index++]);
         m_giveLikeView.ContinueShow();
+        actorInfo.Init(m_giveLikeView);
     }
+    
 }

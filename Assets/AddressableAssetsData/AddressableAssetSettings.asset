@@ -31,6 +31,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5d711cc1b94c3de4d923a047444b638e, type: 2}
   - {fileID: 11400000, guid: 4261352d249d0a14d91be44a4b566607, type: 2}
   - {fileID: 11400000, guid: 6ddb5ec7bbde0894eb515666db6c9414, type: 2}
+  - {fileID: 11400000, guid: a4861300409e0284eaac973c73b30cf9, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -88,6 +89,7 @@ MonoBehaviour:
     - default
     - UIForm
     - UIView
+    - ProfirePortrait
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: f508208cbefffaf43aa6cb50aea79e99, type: 2}
@@ -110,7 +112,7 @@ MonoBehaviour:
         m_SerializedData:
         - m_AssemblyName: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
           m_ClassName: System.Int32
-          m_Data: 57633
+          m_Data: 63793
           m_Key: HostingServicePort
         - m_AssemblyName: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
           m_ClassName: System.String

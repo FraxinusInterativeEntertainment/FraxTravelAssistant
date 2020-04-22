@@ -2,31 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UserInfoDelegate
+public class EditUserInfoDelegate
 {
     private IResponder m_responder;
     private HttpService m_httpService;
-
-    public UserInfoDelegate(IResponder _responder)
+    public EditUserInfoDelegate(IResponder _responder)
     {
         m_responder = _responder;
         m_httpService = new HttpService(Const.Url.GET_USERINFO, HttpRequestType.Get);
     }
     public void GetUserInfo()
     {
-        m_httpService.SendRequest<HttpResponse>(UserInfoCallback);
+        m_httpService.SendRequest<EditUserInfoResponse>(HintInfoCallback);
     }
-    private void UserInfoCallback(HttpResponse _httpResponse)
+    private void HintInfoCallback(EditUserInfoResponse _httpResponse)
     {
-        if (_httpResponse.err_code!=0)
+        if (_httpResponse.err_code == 0)
         {
-            m_responder.OnFault(_httpResponse.err_msg);
+            m_responder.OnResult(_httpResponse.user_extra_info);
         }
         else
         {
-            Debug.Log(_httpResponse.err_msg);
+            Debug.Log("更该失败"+ _httpResponse.err_msg);
             m_responder.OnResult(_httpResponse.err_msg);
         }
     }
 }
-

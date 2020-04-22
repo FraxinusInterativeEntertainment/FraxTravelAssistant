@@ -14,6 +14,8 @@ public static partial class Const
         public const string LOGOUT_SUCCESS = "LogoutSuccess";
         public const string CHECK_LOGIN_STATUS = "CheckLoginStatus";
         public const string CHECK_USER_INFO_EXIST = "CheckUserInfo";
+        public const string EDIT_USER_USER_INFO = "EditUserInfo";
+        public const string BACK_EXTRA_USER_INFO = "UserExtraInfo";
         public const string SUBMIT_USER_INFO = "SubmitUserInfo";
         public const string UPDATE_QUEST_INFO_TASK = "TravelTaskInfo";
         public const string REQUEST_HINT_INFO = "RequestHintInfo";
@@ -30,6 +32,7 @@ public static partial class Const
         public const string GET_FORCE_LOCK_WIKI_GROUP_INFO = "GetForceLockWikiGroupInfo";
         public const string BACK_AVAILABLE_AREA_WIKI_GROUP_INFO = "BackAvailableaAreaWikiGroup";
         public const string BACK_AVAILABLE_FORCE_WIKI_GROUP_INFO = "BackAvailableaForceWikiGroup";
+        public const string BACK_SUBMIT_INFO = "BackSubmitInfo";
         public const string SEND_WIKI_GROUP_NAME = "SendWikiGroupName";
         public const string GET_WIKI_GROUP_BACKGROUND_STORY = "GetWikiGroupBackStory";
         public const string BACK_BACKGROUND_STORY="BackGroundStory";
@@ -50,6 +53,7 @@ public static partial class Const
         public const string WS_SEND = "WsSend";
 
         public const string GET_ACTOR_INFO = "GetActorInfo";
+        public const string SET_ACTOR_ID = "SetActorId";
         public const string SHOW_ACTOR_INFO = "ShowActorInfo";
         public const string GAME_CLOSED = "GAME_CLOSED";
 

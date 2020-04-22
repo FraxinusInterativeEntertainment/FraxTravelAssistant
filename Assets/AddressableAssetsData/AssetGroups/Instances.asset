@@ -23,6 +23,12 @@ MonoBehaviour:
     m_SerializedLabels: []
     m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  - m_GUID: 577005e6f7d0b4d46a96cdef0cd2c4a0
+    m_Address: HeadIcon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_mainAssetType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   - m_GUID: 9f6c07eb29c763945968e104c0c9f971
     m_Address: WikiRecordImage
     m_ReadOnly: 0

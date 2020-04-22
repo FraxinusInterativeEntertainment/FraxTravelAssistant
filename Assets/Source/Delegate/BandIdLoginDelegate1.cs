@@ -30,6 +30,7 @@ public class BandIdLoginDelegate
         }
         else
         {
+            Debug.Log(_httpResponse.err_msg);
             m_responder.OnFault(_httpResponse.err_msg);
         }
     }

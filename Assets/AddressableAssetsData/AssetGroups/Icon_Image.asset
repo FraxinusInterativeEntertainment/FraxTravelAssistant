@@ -16,7 +16,63 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: f11c3146ee9939648afa149c65b4d8ae
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 19faff46fcdc3cf4b866292efa499c33
+    m_Address: portrait_4 (UnityEngine.Sprite)
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ProfirePortrait
+    m_mainAssetType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_GUID: 28f326505a6e9664390ab5ae3723455e
+    m_Address: portrait_7 (UnityEngine.Sprite)
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ProfirePortrait
+    m_mainAssetType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_GUID: 290ee1c096fc11a4b9b549c7c8152805
+    m_Address: portrait_6 (UnityEngine.Sprite)
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ProfirePortrait
+    m_mainAssetType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_GUID: 6bb5faa6503928e41a587c1eee7a3531
+    m_Address: portrait_1 (UnityEngine.Sprite)
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ProfirePortrait
+    m_mainAssetType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_GUID: a42e19aec0fac1b4fa8dcb424ba13282
+    m_Address: portrait_8 (UnityEngine.Sprite)
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ProfirePortrait
+    m_mainAssetType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_GUID: c134e2179506eb44b8c7835134a94194
+    m_Address: portrait_2 (UnityEngine.Sprite)
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ProfirePortrait
+    m_mainAssetType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_GUID: e6eee4caa777bf1429cb879e76c5ae21
+    m_Address: portrait_5 (UnityEngine.Sprite)
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ProfirePortrait
+    m_mainAssetType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_GUID: fc27fcfeef9c9d64e9249ee7e2e6a4cc
+    m_Address: portrait_3 (UnityEngine.Sprite)
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ProfirePortrait
+    m_mainAssetType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: d111faaa0840a3a4dbfe6ce5aad212d0, type: 2}
   m_SchemaSet:

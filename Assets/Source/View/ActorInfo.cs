@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UI;
 
 public class ActorInfo : MonoBehaviour
@@ -14,9 +16,15 @@ public class ActorInfo : MonoBehaviour
     [SerializeField]
     private Text m_actorNameText;
     private bool isSelect = false;
+    public GiveLikeView m_giveLikeView;
+    private string m_actorId;
     void Start()
     {
         m_actorInfoButton.onClick.AddListener(OnClickChoiceThisActor);
+    }
+    public void Init(GiveLikeView _view)
+    {
+        m_giveLikeView = _view;
     }
     private void OnClickChoiceThisActor()
     {
@@ -24,16 +32,19 @@ public class ActorInfo : MonoBehaviour
         if (isSelect==true)
         {
             m_giveLikeImage.gameObject.SetActive(true);
-        }
-        else
-        {
-            m_giveLikeImage.gameObject.SetActive(false);
+            m_giveLikeView.ReceiveActorID(m_actorId);
         }
     }
-    public void Show(ActorDetailsModel _actorInfoList)
+    public void ShowName(ActorDetailsModel _actorInfoList)
     {
-        string nickName = _actorInfoList.avatar;
-        m_actorHeadIconImage.sprite = Resources.Load<Sprite>("Textures/Images/Portraits/"+nickName);
+        string avatarName = _actorInfoList.avatar+ " (UnityEngine.Sprite)";
         m_actorNameText.text = _actorInfoList.nickName;
+        m_actorId = _actorInfoList.id;
+        Addressables.LoadAssetAsync<Sprite>(avatarName).Completed += OnImageInstantiated;
     }
+    private void OnImageInstantiated(AsyncOperationHandle<Sprite> _obj)
+    {
+        m_actorHeadIconImage.sprite = _obj.Result;
+    }
+  
 }

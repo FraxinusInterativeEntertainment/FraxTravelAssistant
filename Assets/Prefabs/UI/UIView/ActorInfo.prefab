@@ -297,6 +297,7 @@ MonoBehaviour:
   m_giveLikeImage: {fileID: 8212991176873960809}
   m_actorHeadIconImage: {fileID: 712251987015801359}
   m_actorNameText: {fileID: 8178425736913572289}
+  m_giveLikeView: {fileID: 0}
 --- !u!1 &7281899842296201159
 GameObject:
   m_ObjectHideFlags: 0
