@@ -75,8 +75,8 @@ public class DebugView : UIViewBase
     private void OnClickCloseAdminPanel()
     {
         m_adminPanel.SetActive(false);
-        m_mofiID.text = null;
-        m_posTagID.text = null;
+        m_mofiID.text = "";
+        m_posTagID.text = "";
     }
     private void GetMofiID(string _mofiId)
     {

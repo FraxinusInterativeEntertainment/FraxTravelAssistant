@@ -6,14 +6,11 @@ public static partial class Const
 {
     public static class Url
     {
-        //Old  Server
-        public const string HTTP_SERVER_ADDRESS = "http://152.136.99.117";
-        public const string WEB_SOCKET_HOST_URI = "http://www.fraxinusmothership.cn";
-        public const string WEB_SOCKET_SERVER_ADDRESS = "ws://www.fraxinusmothership.cn/ws/player/";
-
-        //New Server
         public const string GAME_SERVER_ADDRESS = "http://testgame.fraxinusmothership.cn";
         public const string USER_SERVER_ADDRESS = "http://testuser.fraxinusmothership.cn";
+
+        public const string WEB_SOCKET_HOST_URI = "http://testgame.fraxinusmothership.cn";
+        public const string WEB_SOCKET_SERVER_ADDRESS = "ws://testgame.fraxinusmothership.cn/ws/control_center/";
 
         public const string POST_WRISTBAND_ID = GAME_SERVER_ADDRESS + "/game_auth/device_wristband_login/";
         public const string LOGOUT = GAME_SERVER_ADDRESS + "/game_auth/device_logout/";
