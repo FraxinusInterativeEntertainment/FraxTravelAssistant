@@ -40,8 +40,19 @@ public class EditUserInfoView : UIViewBase
     public void ShowUserInfo(UserExtraInfo _userExtraInfo)
     {
         m_nameText.text = _userExtraInfo.nickname;
-        m_sexText.text = _userExtraInfo.sex;
         m_brithdayText.text = _userExtraInfo.birthday;
+        switch (_userExtraInfo.sex)
+        {
+            case "0":
+                m_sexText.text = "男";
+                break;
+            case "1":
+                m_sexText.text = "女";
+                break;
+            case "2":
+                m_sexText.text = "其他";
+                break;
+        }
     } 
     public void InstateImage(Sprite _sprite)
     {
